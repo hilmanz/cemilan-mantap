@@ -1,0 +1,388 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>OrakUploader - The modern image multi uploader.</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="Karapet Abrahamyan">
+	<meta name="copyright" content="Karapet Abrahamyan">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2014-12-21T21:20:22+01:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+	<script src="assets/js/google-code-prettify/prettify.js"></script>
+
+	
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='easeInQuart';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#333636;color:#00DFFC;}
+		::selection{background:#333636;color:#00DFFC;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#008C9E;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #008C9E, #006673);
+			  background-image: -ms-linear-gradient(top, #008C9E, #006673);
+			  background-image: -webkit-gradient(linear, 0 0, 0 008C9E%, from(#343838), to(#006673));
+			  background-image: -webkit-linear-gradient(top, #008C9E, #006673);
+			  background-image: -o-linear-gradient(top, #008C9E, #006673);
+			  background-image: linear-gradient(top, #008C9E, #006673);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008C9E', endColorstr='#006673', GradientType=0);
+			  border-color: #006673 #006673 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #008C9E #008C9E #bfbfbf;
+		  background-color: #006673;
+		}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#343838;color:#FFFFFF;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+		#documenter_sidebar ul{border-top:1px solid #212424;}
+		#documenter_sidebar ul a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+		#documenter_sidebar ul a:hover{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_sidebar ul a.current{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project-orakuploader">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#overview" title="Overview">Overview</a></li>
+			<li><a href="#requirements" title="Requirements">Requirements</a></li>
+			<li><a href="#quick_install" title="Quick install">Quick install</a></li>
+			<li><a href="#settings" title="Settings">Settings</a></li>
+			<li><a href="#event_catching" title="Event catching">Event catching</a></li>
+			<li><a href="#style_customization" title="Style customization">Style customization</a></li>
+			<li><a href="#watermark" title="Watermark">Watermark</a></li>
+			<li><a href="#sec_tips" title="sec_tips">Security tips</a></li>
+			<li><a href="#examples_code" title="Examples + code">Examples + code</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright Karapet Abrahamyan 2015<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>ORAKUPLOADER</h1>
+	<h2>The modern image multi uploader.</h2>
+	<div id="documenter_buttons">
+		
+	</div>
+	<hr>
+	<ul>
+	
+	
+	<li>by: Karapet Abrahamyan</li>
+	
+	<li>email: <a href="mailto:&#111;&#114;&#97;&#107;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#111;&#114;&#97;&#107;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+	</ul>
+	<p></p>
+	</section>
+	
+	<section id="overview">
+	<div class="page-header"><h3>Overview</h3><hr class="notop"></div>
+<p>
+	<strong>OrakUploader </strong>is a new, modern image multi uploader, offering a wide variety of functions.<br>
+	It&rsquo;s based on HTML5 so it does not require flash. Easy to implement and use.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong>Features</strong>:</p>
+<ul>
+	<li>
+		Resizing</li>
+	<li>
+		Thumbnails</li>
+	<li>
+		Watermarks</li>
+	<li>
+		Drag &amp; Drop</li>
+	<li>
+		Sorting</li>
+	<li>
+		Main Image</li>
+	<li>
+		AJAX Powered</li>
+	<li>
+		HTML5 based (no flash required)</li>
+	<li>
+		Even more...</li>
+</ul>
+</section>
+<section id="requirements">
+	<div class="page-header"><h3>Requirements</h3><hr class="notop"></div>
+<p>
+	PHP 5.x or higher is required, as well as the JavaScript libraries jQuery and jQuery-UI.</p>
+</section>
+<section id="quick_install">
+	<div class="page-header"><h3>Quick install (step-by-step)</h3><hr class="notop"></div>
+<p>
+<ol>
+<li>Extract the archive.</li>
+<li>Upload the <strong>orakuploader</strong> folder to your web server.</li>
+<li>After you upload the files on your server, the first thing you need to do is to include the required client-side libraries</li>
+<pre class="prettyprint lang-html linenums">
+&lt;link type=&quot;text/css&quot; href=&quot;orakuploader/orakuploader.css&quot; rel=&quot;stylesheet&quot;/&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;orakuploader/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;orakuploader/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;orakuploader/orakuploader.js&quot;&gt;&lt;/script&gt;
+</pre>
+<p>
+	Those are, in order, a CSS file, jQuery, jQuery-UI and OrakUploader.<br>
+<li>Insert this line of HTML code where you want the uploader to appear (the <strong>id</strong> attribute represents the name of your uploader).</li>
+<pre class="prettyprint lang-html linenums">
+&lt;div id=&quot;images&quot; orakuploader=&quot;on&quot;&gt;&lt;/div&gt;
+</pre>
+<li>The final fifth step is to initialize the plugin, by adding these lines of code (we recommend to put the following block of code over the HTML from <strong>step 4</strong>).</li>
+<pre class="prettyprint lang-js linenums">
+&lt;script&gt;
+    $(document).ready(function(){
+
+        $(&#39;#images&#39;).orakuploader({
+            orakuploader_path : &#39;orakuploader/&#39;,
+			
+	    orakuploader_main_path : 'files',
+	    orakuploader_thumbnail_path : 'files/tn',
+			
+            orakuploader_add_image : &#39;images/add.png&#39;,
+            orakuploader_add_label : &#39;Browser for images&#39;,
+            
+            orakuploader_resize_to : 1000,
+            orakuploader_thumbnail_size  : 250
+        });
+
+    });
+&lt;/script&gt;</pre>
+<p>
+	<br>
+	The settings used here are:<br>
+	<strong>orakupload_path</strong> - Path to the plugin&rsquo;s directory<br/>
+	<strong>orakuploader_main_path</strong> -The directory, where the big images will be uploaded.<br/>
+	<strong>orakuploader_thumbnail_path</strong> - The directory, where the small images (thumbnails) will be uploaded.<br/>
+	<strong>orakuploader_add_image</strong> - The path to the image which will appear on the &ldquo;upload&rdquo; button.<br/>
+	<strong>orakuploader_add_label</strong> - The text, which will appear on the &ldquo;upload&rdquo; button.<br/>
+	<strong>orakuploader_resize_to</strong> - Images, wider than the value of this setting (in this case 1000px) will be resized proportionally.<br>
+	<strong>orakuploader_thumbnail_size</strong> - The width, in which the thumbnails will be scaled.<br>
+	<br/>
+	Just make sure you have read/write permissions (777) to the main & thumbnail images directory.
+	<br/><br/>
+	By the way, those are just a few of the plugin&rsquo;s capabilities. You can see the rest of them in the <a href="#settings">Settings</a> section.</p>
+
+<li>That's it. You're ready to go!</li>
+</ol>
+	</section>
+<section id="settings">
+	<div class="page-header"><h3>Settings</h3><hr class="notop"></div>
+	<div class="info">
+	Don't be afraid of this section. These are just the settings of the plugin and their descriptions.
+	</div>
+<p>
+	<strong>orakuploader_path</strong><br>
+	&nbsp;&nbsp; | Accepts: string<br>
+	&nbsp;&nbsp; | Default: not set<br>
+	&nbsp;&nbsp; | Path to the plugin&rsquo;s directory<br>
+	<br>
+	<strong>orakuploader_main_path</strong><br>
+	&nbsp;&nbsp; | Accepts: string<br>
+	&nbsp;&nbsp; | Default: not set<br>
+	&nbsp;&nbsp; | The directory, where the big images (original ones) will be uploaded.<br>
+	<br>
+	<strong>orakuploader_thumbnail_path</strong><br>
+	&nbsp;&nbsp; | Accepts: string<br>
+	&nbsp;&nbsp; | Default: not set<br>
+	&nbsp;&nbsp; | The directory, where the small images (thumbnails) will be uploaded.<br>
+	<br>
+	<strong>orakuploader_use_main</strong><br>
+	&nbsp;&nbsp; | Accepts: boolean, true/false<br>
+	&nbsp;&nbsp; | Default: false<br>
+	&nbsp;&nbsp; | If set to true, the &ldquo;main image&rdquo; setting will be enabled.<br>
+	<br>
+	<strong>orakuploader_use_sortable</strong><br>
+	&nbsp;&nbsp; | Accepts: boolean, true/false<br>
+	&nbsp;&nbsp; | Default: false<br>
+	&nbsp;&nbsp; | If set to true, the sorting setting will be enabled.<br>
+	<strong>&nbsp; &nbsp;<br>
+	orakuploader_use_dragndrop</strong><br>
+	&nbsp;&nbsp; | Accepts: boolean, true/false<br>
+	&nbsp;&nbsp; | Default: false<br>
+	&nbsp;&nbsp; | If set to true, the Drag &amp; Drop setting will be enabled.<br>
+	<strong>&nbsp; &nbsp;<br>
+	orakuploader_use_rotation</strong><br>
+	&nbsp;&nbsp; | Accepts: boolean, true/false<br>
+	&nbsp;&nbsp; | Default: false<br>
+	&nbsp;&nbsp; | If set to true, the image rotation setting will be enabled.<br>
+	<br>
+	<strong>orakuploader_resize_to</strong><br>
+	&nbsp;&nbsp; | Accepts: integer<br>
+	&nbsp;&nbsp; | Default: not set<br>
+	&nbsp;&nbsp; | If a value is set, the bigger pictures&rsquo; width will be scaled proportionally based on the entered value.<br>
+	<br>
+	<strong>orakuploader_thumbnail_size</strong><br>
+	&nbsp;&nbsp; | Accepts: integer<br>
+	&nbsp;&nbsp; | Default: 250<br>
+	&nbsp;&nbsp; | The width, in which the thumbnails will be scaled.<br>
+	<br>
+	<strong>orakuploader_add_image</strong><br>
+	&nbsp;&nbsp; | Accepts: string<br>
+	&nbsp;&nbsp; | Default: null<br>
+	&nbsp;&nbsp; | The path to the &ldquo;add&rdquo; button&rsquo;s image.<br>
+	<strong>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
+	orakuploader_add_label</strong><br>
+	&nbsp;&nbsp; | Accepts: string<br>
+	&nbsp;&nbsp; | Default: null<br>
+	&nbsp;&nbsp; | The text, which will appear on the &ldquo;upload&rdquo; button<br>
+	&nbsp; &nbsp;<br>
+	<strong>orakuploader_maximum_uploads</strong><br>
+	&nbsp;&nbsp; | Accepts: integer<br>
+	&nbsp;&nbsp; | Default: 100<br>
+	&nbsp;&nbsp; | The maximum number of files that can be uploaded at a time.<br>
+	<strong>&nbsp; &nbsp;<br>
+	orakuploader_watermark</strong><br>
+	&nbsp;&nbsp; | Accepts: string<br>
+	&nbsp;&nbsp; | Default: null<br>
+	&nbsp;&nbsp; | If set to null, the watermark setting will&nbsp; be disabled. To activate, just set the value to the path of the watermark of your choice.</p>
+	<strong>orakuploader_attach_images</strong><br>
+	&nbsp;&nbsp; | Accepts: Array<br>
+	&nbsp;&nbsp; | Default: null<br>
+	&nbsp;&nbsp; | Allows you to attach already uploaded images to the uploader (usage shown in example #9).<br>
+</section>
+<section id="event_catching">
+	<div class="page-header"><h3>Event catching</h3><hr class="notop"></div>
+<p>
+	When enabled, the following events can be caught:<br>
+	<br>
+	<strong>orakuploader_main_finished</strong> &ndash; triggered when files are being uploaded.<br>
+	<strong>orakuploader_main_changed(filename) </strong>&ndash; triggered when the main image is changed.<br>
+	<strong>orakuploader_picture_deleted(filename) </strong>&ndash; triggered when an image is deleted.<br>
+	<strong>orakuploader_rearranged</strong> &ndash; triggered when images are being rearranged.<br>
+	<br>
+	Example code for all four:</p>
+<pre class="prettyprint lang-js linenums">
+&lt;script&gt;
+&nbsp;&nbsp; &nbsp;$(document).ready(function(){
+
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$(&#39;#images&#39;).orakuploader({
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_path : &#39;orakuploader/&#39;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_main_path : 'files',
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_thumbnail_path : 'files/tn',
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_add_image : &#39;images/add.png&#39;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_add_label : &#39;Browser for images&#39;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_use_main : true,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_use_sortable : true,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_use_dragndrop : true,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_resize_to : 1000,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_thumbnail_size : 250,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; // Triggered when files are being uploaded.
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_finished: function() {
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;alert(&quot;Uploading finished.&quot;);
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;},
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; // Triggered when the main image is changed.
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_main_changed&nbsp;&nbsp;&nbsp; : function (filename) {
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;alert(&quot;Main Picture was changed to \&quot;&quot;+filename+ &quot;\&quot;.&quot;);
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;},
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; // Triggered when images are being rearranged.
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_rearranged : function() {
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;alert(&quot;You rearranged something.&quot;);
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;},
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; // Triggered when when an image is deleted.
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_picture_deleted : function(filename) {
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;alert(&quot;Picture \&quot;&quot;+filename+ &quot;\&quot; is deleted.&quot;);
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;});
+
+&nbsp;&nbsp; &nbsp;});
+&lt;/script&gt;</pre>
+</section>
+<section id="style_customization">
+	<div class="page-header"><h3>Style customization</h3><hr class="notop"></div>
+<p>
+	To change the style, simply edit orakuploader.css.<br>
+	<br>
+	With elementary CSS knowledge, you can edit it to suit your taste.</p>
+</section>
+<section id="watermark">
+	<div class="page-header"><h3>Watermark</h3><hr class="notop"></div>
+<p>
+	In case you haven&rsquo;t read the <a href="#settings">Settings</a> section, this functionality is enabled easily.<br>
+	<br>
+	Just use the setting <strong>orakuploader_watermark</strong> on the plugin initiation, by setting its value to the path of the watermark.<br>
+	<br>
+	Example in code:</p>
+<pre class="prettyprint lang-js linenums">
+&lt;script&gt;
+&nbsp;&nbsp; &nbsp;$(document).ready(function(){
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$(&#39;#images&#39;).orakuploader({
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_path : &#39;orakuploader/&#39;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+	    orakuploader_main_path : 'files',
+	    orakuploader_thumbnail_path : 'files/tn',
+		
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_add_image : &#39;images/add.png&#39;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_add_label : &#39;Browser for images&#39;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_resize_to : 1000,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_thumbnail_size : 250,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;orakuploader_watermark : &#39;images/mywatermark.png&#39;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;});
+&nbsp;&nbsp; &nbsp;});
+&lt;/script&gt;</pre>
+<p>
+	&nbsp;</p>
+</section>
+<section id="sec_tips">
+	<div class="page-header"><h3>Security tips</h3><hr class="notop"></div>
+<p>
+	<div class="info">
+		Never set 777 permissions to all of your folders. Set it only on the necessary folders. 
+	</div>
+	<br/>
+	<div class="info">
+		If you're worried about setting the upload directories from JS, feel free to set them from the back-end code - <strong>orakuploader.php</strong> lines 9 & 10.
+	</div>
+</p>
+</section>
+<section id="examples_code">
+	<div class="page-header"><h3>Examples + code</h3><hr class="notop"></div>
+<p>
+	Examples from the demo and their code can be found in the examples folder in the archive.</p>
+</section>
+
+	</div>
+</body>
+</html>
