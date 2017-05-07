@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebUI Popover Demo</title>       
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/jquery.webui-popover.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/font-bebas.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/font-opensans.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/jssocials.css" rel="stylesheet" type="text/css"  />
+        <link href="css/jssocials-theme-flat.css" rel="stylesheet" type="text/css"  />
+        
+        <!-- Rating -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link href="vendor/j-rating/j-rating.css" type="text/css" rel="stylesheet" />
+        <!-- End Rating -->
+    </head>
+    <body>
+        
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    
+                </div>
+                <div class="col-md-9">
+                    <div >
+                        <!-- <a href="#" class="share-pop btn btn-default center-block" data-animation="pop" data-placement="auto-top">Share!!</a> -->
+                        <!-- <a href="#" class="btn share-pop center-block" data-animation="pop"  data-placement="auto-top"
+                            data-content="<p>WebUI pop with animation</p><p>can set by code: <code>animation:'pop'</code></p><p>or  element attr: <code>data-animation='pop'</code> </p>"
+                            ><span class="prefix">animation:</span>pop</a> -->
+                                    <a href="#" class="show-pop-large btn btn-default center-block" data-animation="pop" data-placement="auto-top">
+                                    <span class="prefix">pop </span>large <span class="suffix">content</span></a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="largeContent" style="display:none;">
+            <div id="shareIconsCountInside"></div>
+        </div>
+    </section>
+
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/flexslider.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/masonry.min.js"></script>
+        <script src="js/ytplayer.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="vendor/j-rating/j-rating.js"></script>
+        <script src="js/jssocials.min.js"></script>
+        <script src="js/jquery.webui-popover.min.js"></script> 
+        <script>
+            // Social Share
+            $("#shareIconsCountInside").jsSocials({
+                //url: "http://www.google.com",
+                //text: "Google Search Page",
+                showLabel: false,
+                showCount: "inside",
+                shares: ["twitter", "facebook"]
+            });
+        </script>
+
+        <script>
+            (function(){
+                function initPopover(){                 
+                    var largeContent = $('#largeContent').html(),
+                        largeSettings = {content:largeContent,
+                                            width:200,
+                                            height:75,
+                                            padding:true,
+                                            //delay:{show:300,hide:1000},
+                                            closeable:true
+                                        };
+                    var popLarge = $('a.show-pop-large').webuiPopover('destroy').webuiPopover($.extend({},largeSettings));
+                }
+                initPopover();
+            })();
+        </script>
+    </body>
+</html>

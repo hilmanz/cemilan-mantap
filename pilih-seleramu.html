@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Cemilan Mantap - Pilih Seleramu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/font-bebas.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/font-opensans.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link type="text/css" href="vendor/gmaps-autocomplete/styles/jquery-ui/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+        <link href="vendor/j-rating/j-rating.css" type="text/css" rel="stylesheet" />
+        <link type="text/css" href="vendor/orakuploader/orakuploader.css" rel="stylesheet"/>
+        
+        <script type="text/javascript" src="vendor/orakuploader/jquery.min.js"></script>
+        <script type="text/javascript" src="vendor/orakuploader/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="vendor/orakuploader/orakuploader.js"></script>
+        
+    </head>
+    <body>
+        <div class="nav-container">
+            <a id="top"></a>
+            <nav class="navbar navbar-inverse nav-centered absolute transparent custom-navbar" role="navigation">
+              <div class="container">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                  <span class="sr-only">MENU</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-header">
+                  <a class="navbar-brand" rel="home" href="#" title="Cemilan Mantap">
+                    <img alt="Cemilan Mantap" src="img/brand/logo-cemilan-mantap.png">
+                  </a>
+                </div>
+                
+                <!-- Non-collapsing right-side icons -->
+                <div class="navbar-right">
+                  <img src="img/cup-top-right.png" alt="Kopi ABC">
+                </div>
+                
+                <!-- the collapsing menu -->
+                <div class="collapse navbar-collapse navbar-left" id="navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="tentang.html">Tentang Cemilan</a></li>
+                    <li> <a href="directory.html">Directory</a></li>
+                    <li> <a href="directory.html">Videos</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                  </ul>
+                </div>
+                <!--/.nav-collapse -->
+                
+              </div>
+              <!--/.container -->
+            </nav>
+        </div>
+        <div class="main-container bg-secondary">
+            <section class="image-bg">
+                <div class="background-image-holder pilih-seleramu">
+                    <img alt="image" class="background-image" src="img/bkg-pilih-seleramu.jpg" />
+                </div>
+                <div class="container">
+                    <div class="page-title page-title-3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 text-center">
+                                    <h2 class="mb0">Pilih Seleramu</h2>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>                
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+                            <form id="pilih-seleramu">
+                                <div class="overflow-hidden">
+                                    <input type="text" name="nama-cemilan" class="validate-required" placeholder="Nama Cemilan*" />
+                                    <input type="text" name="nama-tempat" class="validate-required" placeholder="Nama Tempat*" />
+                                    <div id="gmaps-container">
+                                        <div id='input-gmaps'>
+                                          <input class="gmaps" id='gmaps-input-address' placeholder='ALAMAT' type='text' />
+                                          <br/>
+
+                                          <div id='gmaps-error'></div>
+                                        </div>
+
+                                        <div id='gmaps-canvas'></div>
+                                    </div>
+                                    <textarea name="review" placeholder="Review" rows="3"></textarea>
+
+                                    <div class="row p16 pt16" style="background-color: #F2B800">
+                                        <div class="col-md-4 col-xs-4 text-left">
+                                            <h4>RATING</h4>
+                                        </div>
+                                        <div class="col-md-8 col-xs-8 text-right">
+                                            <div id="pilihseleramu-rating"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row text-center mt24">
+                                        <div class="col-md-6">
+                                            <label class="pilih-pastimanis">
+                                                <input type="radio" name="category_cemilan" id="category_pastimanis" value="#PastiManis">
+                                                <img src="img/input-btn-pastimanis.png" alt="PastiManis">
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="pilih-gurihmantap">
+                                                <input type="radio" name="category_cemilan" id="category_gurihmantap" value="#GurihMantap">
+                                                <img src="img/input-btn-gurihmantap.png" alt="GurihMantap">
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row text-center mt24">
+                                        <div class="col-md-3 col-xs-6">
+                                            <label class="pilihseleramu">
+                                                <input type="radio" name="time_cemilan" id="cemilan_pagi" value="pagi">
+                                                <img src="img/input-pagi.png" alt="Pagi">
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 col-xs-6">
+                                            <label class="pilihseleramu">
+                                                <input type="radio" name="time_cemilan" id="cemilan_siang" value="Siang">
+                                                <img src="img/input-siang.png" alt="Siang">
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 col-xs-6">
+                                            <label class="pilihseleramu">
+                                                <input type="radio" name="time_cemilan" id="cemilan_sore" value="Sore">
+                                                <img src="img/input-sore.png" alt="Sore">
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 col-xs-6">
+                                            <label class="pilihseleramu">
+                                                <input type="radio" name="time_cemilan" id="cemilan_malam" value="Malam">
+                                                <img src="img/input-malam.png" alt="Malam">
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="photo-upload-container">
+                                        <div class="row center-block">
+                                            <div class="col-md-3 col-sm-6 col-xs-6 mb-xs-32">
+                                                <div id="photo_01" orakuploader="on"></div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-6 mb-xs-32">
+                                                <div id="photo_02" orakuploader="on"></div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-6 mb-xs-32">
+                                                <div id="photo_03" orakuploader="on"></div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-6 mb-xs-32">
+                                                <div id="photo_04" orakuploader="on"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3 mt64">
+                                        <div class="modal-container">
+                                            <button type="submit" href="#" class="btn-modal">Submit</button>
+                                            
+                                            <!-- START MODAL DAFTAR CEMILANMANTAP -->
+                                            <div class="foundry_modal text-center image-bg">
+                                                <div class="background-image-holder submit-pilihseleramu">
+                                                    <img alt="Background" class="background-image" src="img/background/bkg-modal.jpg" />
+                                                </div>
+                                                <div class="text-left">
+                                                    <img src="img/brand/logo-cemilan-mantap.png" alt="cemilan mantap">
+                                                </div>
+                                                <div class="row v-align-children">
+                                                    <div class="col-md-12 col-sm-12 mb-xs-24">
+                                                        <h3 class="color-body">DAFTAR CEMILANMANTAP</h3>
+                                                        <div class="row">
+                                                            <div class="col-sm-4 col-sm-offset-2">
+                                                                <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-1x fa-facebook"></i> </button>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <button type="button" class="btn btn-filled-blue btn-lg btn-block"><i class="fa fa-1x fa-twitter"></i></button>
+                                                            </div>
+                                                        </div>
+                                                        <h4 class="bulat  center-block">ATAU</h4>
+                                                        <div class="row">
+                                                            <div class="col-sm-8 col-sm-offset-2">
+                                                                <input type="text" name="email" class="col-md-12 mb-xs-8" placeholder="Email Address" />
+                                                                <input type="text" name="password" class="col-md-12 mb-xs-8" placeholder="Password" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-md-offset-4">
+                                                                <button type="submit" class="col-md-4 text-center mb0">SUBMIT</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- END MODAL DAFTAR CEMILANMANTAP -->
+
+
+
+                                            <!-- START MODAL PARTISIPASI -->
+                                            <div class="foundry_modal text-center image-bg">
+                                                <div class="background-image-holder submit-pilihseleramu">
+                                                    <img alt="Background" class="background-image" src="img/background/bkg-modal.jpg" />
+                                                </div>
+                                                
+                                                <div class="row hidden-sm hidden-xs">
+                                                    <div class="col-md-6">
+                                                        <div class="text-left">
+                                                            <img src="img/brand/logo-cemilan-mantap.png" alt="cemilan mantap">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="text-right">
+                                                            <img src="img/cup-top-right.png" alt="Kopi ABC" class="mt24">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="row v-align-children">
+                                                    <div class="col-md-12 col-sm-12 mb-xs-24">
+                                                        <h2 class="color-body">TERIMA KASIH<br>TELAH BERPARTISIPASI<br>DI CEMILANMANTAP.COM</h2>
+
+                                                        <h4 class="color-red">CEMILAN YANG SUDAH KAMU SUBMIT AKAN MELALUI PROSES VERIFIKASI TERLEBIH DAHULU</h4>
+
+                                                        <h4 class="color-body">INFO LEBIH LANUT IKUTI TERUS SOCIAL MEDIA KOPI ABC</h4>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-sm-8 col-sm-offset-2">
+                                                                <ul class="list-inline">
+                                                                    <li><i class="fa fa-sm fa-facebook color-fb"></i> <span class="h5 color-body bold">KOPIMANTAPABC</span></li>
+                                                                    <li><i class="fa fa-sm fa-instagram color-instagram"></i> <span class="h5 color-body bold">KOPIMANTAPABC</span></li>
+                                                                    <li><i class="fa fa-sm fa-twitter color-tw"></i> <span class="h5 color-body bold">KOPIMANTAPABC</span></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
+                                                                <button type="submit" class="col-md-4 text-center mb0">OK</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- END MODAL PARTISIPASI -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="bg-dark">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 text-left">
+                        <div class="left bg-yellow p24">
+                            <ul class="list-inline social-list text-center-xs">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-facebook fa-2x"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-instagram fa-2x"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter fa-2x"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-youtube-play fa-2x"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-md-offset-1 col-sm-6">
+                        <div class="widget text-center">
+                            <span class="sub">
+                                <p class="mb0 p0">www.kopiabc.co.id</p>
+                                <p class="mt0 p0">&copy; 2017 Cemilan mantap, all rights reserved.</p>
+                            </span>
+                        </div>
+                        <!--end of widget-->
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="widget text-center">
+                            <img src="img/logo-kopi-abc-bottom.png" alt="Kopi ABC">
+                        </div>
+                        <!--end of widget-->
+                    </div>
+                </div>
+                <!--end of row-->
+                <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
+            </footer>
+        </div>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/flexslider.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/masonry.min.js"></script>
+        <script src="js/ytplayer.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/scripts.js"></script>
+        
+        <script src="vendor/j-rating/j-rating.js"></script>
+        <script>
+            /* RATING */
+            $("#pilihseleramu-rating").jRating({
+                stars: 5,
+                size: "24px",
+                buttons_color: "red",
+                active_color: "white",
+                text: false
+            });
+        </script>
+
+        <!-- UPLOAD PHOTO -->
+        <script>
+        //jQuery.noConflict();
+        $(document).ready(function(){
+            $('#photo_01').orakuploader({
+                orakuploader_path : 'vendor/orakuploader/',
+                
+                orakuploader_main_path : 'vendor/orakuploader/files',
+                orakuploader_thumbnail_path : 'vendor/orakuploader/files/thumbs',
+                
+                orakuploader_add_image : 'img/ico-photo-upload.png',
+                orakuploader_add_label : 'Add Photos',
+                
+                orakuploader_resize_to : 600,
+                orakuploader_thumbnail_size : 158
+            });
+
+            $('#photo_02').orakuploader({
+                orakuploader_path : 'vendor/orakuploader/',
+                
+                orakuploader_main_path : 'vendor/orakuploader/files',
+                orakuploader_thumbnail_path : 'vendor/orakuploader/files/thumbs',
+                
+                orakuploader_add_image : 'img/ico-photo-upload.png',
+                orakuploader_add_label : 'Add Photos',
+                
+                orakuploader_resize_to : 600,
+                orakuploader_thumbnail_size : 158
+            });
+
+            $('#photo_03').orakuploader({
+                orakuploader_path : 'vendor/orakuploader/',
+                
+                orakuploader_main_path : 'vendor/orakuploader/files',
+                orakuploader_thumbnail_path : 'vendor/orakuploader/files/thumbs',
+                
+                orakuploader_add_image : 'img/ico-photo-upload.png',
+                orakuploader_add_label : 'Add Photos',
+                
+                orakuploader_resize_to : 600,
+                orakuploader_thumbnail_size : 158
+            });
+
+            $('#photo_03').orakuploader({
+                orakuploader_path : 'vendor/orakuploader/',
+                
+                orakuploader_main_path : 'vendor/orakuploader/files',
+                orakuploader_thumbnail_path : 'vendor/orakuploader/files/thumbs',
+                
+                orakuploader_add_image : 'img/ico-photo-upload.png',
+                orakuploader_add_label : 'Add Photos',
+                
+                orakuploader_resize_to : 600,
+                orakuploader_thumbnail_size : 158
+            });
+
+            $('#photo_04').orakuploader({
+                orakuploader_path : 'vendor/orakuploader/',
+                
+                orakuploader_main_path : 'vendor/orakuploader/files',
+                orakuploader_thumbnail_path : 'vendor/orakuploader/files/thumbs',
+                
+                orakuploader_add_image : 'img/ico-photo-upload.png',
+                orakuploader_add_label : 'Add Photos',
+                
+                orakuploader_resize_to : 600,
+                orakuploader_thumbnail_size : 158
+            });
+
+        });
+        </script>
+
+
+        <!-- google maps -->
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script src="vendor/gmaps-autocomplete/js/gmaps.js"></script>
+        <!--script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPjwgzIIswxQs1SAYKkeUW5R-oN5uAWUA&callback=initMap" type="text/javascript"></script-->
+
+    </body>
+</html>
