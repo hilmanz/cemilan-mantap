@@ -160,38 +160,27 @@
     bottom: 0;
     right: 0;
 }
-/* Tablets (>=768px)*/
-@media (max-width: 991px) {
-    .gisel-gading-wrapper .big-pilih-selera {
-         -webkit-transform: translate(-720px, 790px);
-        transform: translate(-720px, 790px);
-    }
-    .gisel-gading-wrapper .v-align-children {
-        -webkit-transform: translateY(650px);
-        transform: translateY(650px);
-    }
-    .gisel-gading-wrapper .v-align-children .versus {
-        -webkit-transform: translateY(-150px);
-        transform: translateY(-150px);
-    }
-    .gisel-gading-wrapper .headline-home {
-        -webkit-transform: translate(750px, -550px);
-        transform: translate(750px, -550px);
-    }
-    .gisel-gading-wrapper .pick-mantap .pick-pastimanis {
-        -webkit-transform: translate(-66px, -88px);
-        transform: translate(-66px, -88px);
-    }
-    .gisel-gading-wrapper .pick-mantap .pick-gurihmantap {
-        -webkit-transform: translateY(-310px);
-        transform: translateY(-310px);
-    }
-}
+
 /*Desktops (>=992px)*/
 @media (max-width: 1199px) {
     .gisel-gading-wrapper .big-pilih-selera {
-         -webkit-transform: translate(-720px, 790px);
-        transform: translate(-720px, 790px);
+         -webkit-transform: translate(-550px, 450px);
+        transform: translate(-550px, 450px);
+    }
+    .gisel-gading-wrapper .big-pilih-selera img{
+        width: 200px;
+    }
+    .gisel-gading-wrapper .headline-home {
+        -webkit-transform: translate(460px, -530px);
+        transform: translate(460px, -530px);
+    }
+    .gisel-gading-wrapper h6.headline-home {
+        width:300px !important;
+    }
+    .gisel-gading-wrapper h6.headline-home.lead {
+        font-size: 16px;
+        font-weight: normal !important;
+        line-height: 1;
     }
     .gisel-gading-wrapper .v-align-children {
         -webkit-transform: translateY(340px);
@@ -200,6 +189,10 @@
     .gisel-gading-wrapper .v-align-children .gisel-animate img {
         height:700px;
     }
+    .gisel-gading-wrapper .v-align-children .gading-animate {
+        -webkit-transform: translateX(15px);
+        transform: translateX(15px);
+    }
     .gisel-gading-wrapper .v-align-children .gading-animate img {
         height:650px;
     }
@@ -207,17 +200,139 @@
         -webkit-transform: translateY(-150px);
         transform: translateY(-150px);
     }
-    .gisel-gading-wrapper .headline-home {
-        -webkit-transform: translate(750px, -550px);
-        transform: translate(750px, -550px);
-    }
     .gisel-gading-wrapper .pick-mantap .pick-pastimanis {
-        -webkit-transform: translate(-66px, -88px);
-        transform: translate(-66px, -88px);
+        -webkit-transform: translate(0px, -148px);
+        transform: translate(0px, -148px);
     }
     .gisel-gading-wrapper .pick-mantap .pick-gurihmantap {
-        -webkit-transform: translateY(-310px);
-        transform: translateY(-310px);
+        -webkit-transform: translateY(-280px);
+        transform: translateY(-280px);
+    }
+}
+
+/* Tablets (>=768px)*/
+@media (max-width: 991px) {
+
+}
+
+/*Phones (<768px)*/
+@media (max-width: 767px) {
+    .gisel-gading-wrapper .big-pilih-selera {
+         -webkit-transform: translate(-60px, 80px);
+        transform: translate(-60px, 80px);
+    }
+    .gisel-gading-wrapper .headline-home {
+        -webkit-transform: translate(10%, -280px);
+        transform: translate(10%, -280px);
+    }
+    .gisel-gading-wrapper .v-align-children {
+        -webkit-transform: translate(10px, 220px);
+        transform: translate(10px, 220px);
+    }
+    .gisel-gading-wrapper .v-align-children .gading-animate {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+    }
+    .gisel-gading-wrapper .v-align-children .gisel-animate img {
+        height:300px;
+    }
+    .gisel-gading-wrapper .v-align-children .gading-animate img {
+        height:300px;
+    }
+    .gisel-gading-wrapper .v-align-children .versus {
+        -webkit-transform: translateY(-60px);
+        transform: translateY(-60px);
+    }
+    .gisel-gading-wrapper .v-align-children .versus img {
+        width: 25%;
+    }
+    .gisel-gading-wrapper .pick-mantap .pick-pastimanis {
+        -webkit-transform: translate(0px, 72px);
+        transform: translate(0px, 72px);
+    }
+    .gisel-gading-wrapper .pick-mantap .pick-gurihmantap {
+        -webkit-transform: translate(30px, 0px);
+        transform: translate(30px, 0px);
+    }
+}
+
+/* iPad 1 & 2 in landscape */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 1)  { 
+    .gisel-gading-wrapper .v-align-children {
+        -webkit-transform: translate(-34px, 340px) !important;
+        transform: translate(-34px, 340px) !important;
+    }
+    .gisel-gading-wrapper .headline-home {
+        -webkit-transform: translate(680px, -572px);
+        transform: translate(680px, -572px);
+    }
+    .gisel-gading-wrapper .big-pilih-selera {
+        -webkit-transform: translate(-760px, 450px);
+        transform: translate(-760px, 450px);
+    }
+    .gisel-gading-wrapper .big-pilih-selera img {
+        width: auto;
+    }
+}
+
+/* iPad 1 & 2 in portrait */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) 
+and (-webkit-min-device-pixel-ratio: 1) { 
+    .gisel-gading-wrapper .v-align-children {
+        -webkit-transform: translate(72px, 340px) !important;
+        transform: translate(72px, 340px) !important;
+    }
+    .gisel-gading-wrapper .pick-mantap .pick-pastimanis {
+        -webkit-transform: translate(-70px, -159px);
+        transform: translate(-70px, -159px);
+    }
+}
+
+
+/* iPhone 6 in landscape */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) { 
+    .gisel-gading-wrapper .v-align-children {
+        -webkit-transform: translate(190px, 255px) !important;
+        transform: translate(190px, 255px) !important;
+    }
+    .gisel-gading-wrapper .v-align-children .gisel-animate {
+        -webkit-transform: translateX(68px) !important;
+        transform: translateX(68px) !important;
+    }
+}
+
+/* iPhone 6 Plus in landscape */
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : landscape) {
+    .gisel-gading-wrapper .v-align-children {
+        -webkit-transform: translate(60px, 520px);
+        transform: translate(60px, 520px);
+    }
+    .gisel-gading-wrapper .v-align-children .gisel-animate {
+        -webkit-transform: translateX(54px);
+        transform: translateX(54px);
+    }
+}
+/* iPhone 6 Plus in portrait */
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : portrait) {
+    .gisel-gading-wrapper .v-align-children {
+        -webkit-transform: translate(50px,196px);
+        transform: translate(50px,196px);
     }
 }
 
