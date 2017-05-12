@@ -9,7 +9,7 @@ var mr_firstSectionHeight,
 
 $(document).ready(function() {
     "use strict";
-
+    
     // Smooth scroll to inner links
 
     $('.inner-link').each(function(){
@@ -64,114 +64,6 @@ $(document).ready(function() {
 
     $('.progress-bar').each(function() {
         $(this).css('width', $(this).attr('data-progress') + '%');
-    });
-
-    // Navigation
-
-    if (!$('nav').hasClass('fixed') && !$('nav').hasClass('absolute')) {
-
-        // Make nav container height of nav
-
-        $('.nav-container').css('min-height', $('nav').outerHeight(true));
-
-        $(window).resize(function() {
-            $('.nav-container').css('min-height', $('nav').outerHeight(true));
-        });
-
-        // Compensate the height of parallax element for inline nav
-
-        if ($(window).width() > 768) {
-            $('.parallax:nth-of-type(1) .background-image-holder').css('top', -($('nav').outerHeight(true)));
-        }
-
-        // Adjust fullscreen elements
-
-        if ($(window).width() > 768) {
-            $('section.fullscreen:nth-of-type(1)').css('height', ($(window).height() - $('nav').outerHeight(true)));
-        }
-
-    } else {
-        $('body').addClass('nav-is-overlay');
-    }
-
-    if ($('nav').hasClass('bg-dark')) {
-        $('.nav-container').addClass('bg-dark');
-    }
-
-
-    // Fix nav to top while scrolling
-
-    mr_nav = $('body .nav-container nav:first');
-    mr_navOuterHeight = $('body .nav-container nav:first').outerHeight();
-    window.addEventListener("scroll", updateNav, false);
-
-    // Menu dropdown positioning
-
-    $('.menu > li > ul').each(function() {
-        var menu = $(this).offset();
-        var farRight = menu.left + $(this).outerWidth(true);
-        if (farRight > $(window).width() && !$(this).hasClass('mega-menu')) {
-            $(this).addClass('make-right');
-        } else if (farRight > $(window).width() && $(this).hasClass('mega-menu')) {
-            var isOnScreen = $(window).width() - menu.left;
-            var difference = $(this).outerWidth(true) - isOnScreen;
-            $(this).css('margin-left', -(difference));
-        }
-    });
-
-    // Mobile Menu
-
-    $('.mobile-toggle').click(function() {
-        $('.nav-bar').toggleClass('nav-open');
-        $(this).toggleClass('active');
-    });
-
-    $('.menu li').click(function(e) {
-        if (!e) e = window.event;
-        e.stopPropagation();
-        if ($(this).find('ul').length) {
-            $(this).toggleClass('toggle-sub');
-        } else {
-            $(this).parents('.toggle-sub').removeClass('toggle-sub');
-        }
-    });
-
-    $('.module.widget-handle').click(function() {
-        $(this).toggleClass('toggle-widget-handle');
-    });
-
-    $('.search-widget-handle .search-form input').click(function(e){
-        if (!e) e = window.event;
-        e.stopPropagation();
-    });
-
-    // Offscreen Nav
-
-    if($('.offscreen-toggle').length){
-    	$('body').addClass('has-offscreen-nav');
-    }
-    else{
-        $('body').removeClass('has-offscreen-nav');
-    }
-
-    $('.offscreen-toggle').click(function(){
-    	$('.main-container').toggleClass('reveal-nav');
-    	$('nav').toggleClass('reveal-nav');
-    	$('.offscreen-container').toggleClass('reveal-nav');
-    });
-
-    $('.main-container').click(function(){
-    	if($(this).hasClass('reveal-nav')){
-    		$(this).removeClass('reveal-nav');
-    		$('.offscreen-container').removeClass('reveal-nav');
-    		$('nav').removeClass('reveal-nav');
-    	}
-    });
-
-    $('.offscreen-container a').click(function(){
-    	$('.offscreen-container').removeClass('reveal-nav');
-    	$('.main-container').removeClass('reveal-nav');
-    	$('nav').removeClass('reveal-nav');
     });
 
 
