@@ -194,8 +194,14 @@
         transform: translate(-720px, 790px);
     }
     .gisel-gading-wrapper .v-align-children {
-        -webkit-transform: translateY(650px);
-        transform: translateY(650px);
+        -webkit-transform: translateY(340px);
+        transform: translateY(340px);
+    }
+    .gisel-gading-wrapper .v-align-children .gisel-animate img {
+        height:700px;
+    }
+    .gisel-gading-wrapper .v-align-children .gading-animate img {
+        height:650px;
     }
     .gisel-gading-wrapper .v-align-children .versus {
         -webkit-transform: translateY(-150px);
