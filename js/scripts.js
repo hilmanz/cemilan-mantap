@@ -1,15 +1,12 @@
 var mr_firstSectionHeight,
-    mr_nav,
-    mr_navOuterHeight,
-    mr_navScrolled = false,
-    mr_navFixed = false,
-    mr_outOfSight = false,
     mr_floatingProjectSections,
     mr_scrollTop = 0;
 
+var _functions = {};
+
 $(document).ready(function() {
     "use strict";
-
+    
     // Smooth scroll to inner links
 
     $('.inner-link').each(function(){
@@ -66,29 +63,6 @@ $(document).ready(function() {
         $(this).css('width', $(this).attr('data-progress') + '%');
     });
 
-    // Navigation
-
-    /***************** Navbar-Collapse ******************/
-
-    $(window).scroll(function () {
-        if ($(".navbar").offset().top > 50) {
-            $(".navbar-fixed-top").addClass("top-nav-collapse");
-        } else {
-            $(".navbar-fixed-top").removeClass("top-nav-collapse");
-        }
-    });
-
-    // Fix nav to top while scrolling
-    mr_nav = $('body .nav-container nav:first');
-    mr_navOuterHeight = $('body .nav-container nav:first').outerHeight();
-    window.addEventListener("scroll", updateNav, false);
-    
-    /***************** Scroll Spy ******************/
-    $('body').scrollspy({
-        target: '.navbar-fixed-top',
-        offset: 51
-    })
-
 
     // Populate filters
 
@@ -130,58 +104,6 @@ $(document).ready(function() {
         }
     });
 
-    // Twitter Feed
-
-    $('.tweets-feed').each(function(index) {
-        $(this).attr('id', 'tweets-' + index);
-    }).each(function(index) {
-
-        function handleTweets(tweets) {
-            var x = tweets.length;
-            var n = 0;
-            var element = document.getElementById('tweets-' + index);
-            var html = '<ul class="slides">';
-            while (n < x) {
-                html += '<li>' + tweets[n] + '</li>';
-                n++;
-            }
-            html += '</ul>';
-            element.innerHTML = html;
-            return html;
-        }
-
-        twitterFetcher.fetch($('#tweets-' + index).attr('data-widget-id'), '', 5, true, true, true, '', false, handleTweets);
-
-    });
-
-    // Instagram Feed
-
-    if($('.instafeed').length){
-    	jQuery.fn.spectragram.accessData = {
-			accessToken: '1406933036.fedaafa.feec3d50f5194ce5b705a1f11a107e0b',
-			clientID: 'fedaafacf224447e8aef74872d3820a1'
-		};
-
-        $('.instafeed').each(function() {
-            var feedID = $(this).attr('data-user-name') + '_';
-            $(this).children('ul').spectragram('getUserFeed', {
-                query: feedID,
-                max: 12
-            });
-        });
-    }
-
-
-
-    // Flickr Feeds
-
-    if($('.flickr-feed').length){
-        $('.flickr-feed').each(function(){
-            var userID = $(this).attr('data-user-id');
-            var albumID = $(this).attr('data-album-id');
-            $(this).flickrPhotoStream({ id: userID, setId: albumID, container: '<li class="masonry-item" />' });
-        });
-    }
 
     // Image Sliders
 
@@ -552,207 +474,9 @@ $(document).ready(function() {
 
     //                                                            //
     //                                                            //
-    // Contact form code                                          //
+    // form code                                          //
     //                                                            //
     //                                                            //
-
-    $('form.form-email, form.form-newsletter').submit(function(e) {
-
-        // return false so form submits through jQuery rather than reloading page.
-        if (e.preventDefault) e.preventDefault();
-        else e.returnValue = false;
-
-        var thisForm = $(this).closest('form.form-email, form.form-newsletter'),
-            submitButton = thisForm.find('button[type="submit"]'),
-            error = 0,
-            originalError = thisForm.attr('original-error'),
-            preparedForm, iFrame, userEmail, userFullName, userFirstName, userLastName, successRedirect, formError, formSuccess;
-
-        // Mailchimp/Campaign Monitor Mail List Form Scripts
-        iFrame = $(thisForm).find('iframe.mail-list-form');
-
-        thisForm.find('.form-error, .form-success').remove();
-        submitButton.attr('data-text', submitButton.text());
-        thisForm.append('<div class="form-error" style="display: none;">' + thisForm.attr('data-error') + '</div>');
-        thisForm.append('<div class="form-success" style="display: none;">' + thisForm.attr('data-success') + '</div>');
-        formError = thisForm.find('.form-error');
-        formSuccess = thisForm.find('.form-success');
-        thisForm.addClass('attempted-submit');
-
-        // Do this if there is an iframe, and it contains usable Mail Chimp / Campaign Monitor iframe embed code
-        if ((iFrame.length) && (typeof iFrame.attr('srcdoc') !== "undefined") && (iFrame.attr('srcdoc') !== "")) {
-
-            console.log('Mail list form signup detected.');
-            if (typeof originalError !== typeof undefined && originalError !== false) {
-                formError.html(originalError);
-            }
-            userEmail = $(thisForm).find('.signup-email-field').val();
-            userFullName = $(thisForm).find('.signup-name-field').val();
-            if ($(thisForm).find('input.signup-first-name-field').length) {
-                userFirstName = $(thisForm).find('input.signup-first-name-field').val();
-            } else {
-                userFirstName = $(thisForm).find('.signup-name-field').val();
-            }
-            userLastName = $(thisForm).find('.signup-last-name-field').val();
-
-            // validateFields returns 1 on error;
-            if (validateFields(thisForm) !== 1) {
-                preparedForm = prepareSignup(iFrame);
-
-                preparedForm.find('#mce-EMAIL, #fieldEmail').val(userEmail);
-                preparedForm.find('#mce-LNAME, #fieldLastName').val(userLastName);
-                preparedForm.find('#mce-FNAME, #fieldFirstName').val(userFirstName);
-                preparedForm.find('#mce-NAME, #fieldName').val(userFullName);
-                thisForm.removeClass('attempted-submit');
-
-                // Hide the error if one was shown
-                formError.fadeOut(200);
-                // Create a new loading spinner in the submit button.
-                submitButton.html(jQuery('<div />').addClass('form-loading')).attr('disabled', 'disabled');
-
-                try{
-                    $.ajax({
-                        url: preparedForm.attr('action'),
-                        crossDomain: true,
-                        data: preparedForm.serialize(),
-                        method: "GET",
-                        cache: false,
-                        dataType: 'json',
-                        contentType: 'application/json; charset=utf-8',
-                        success: function(data){
-                            // Request was a success, what was the response?
-                            if (data.result != "success" && data.Status != 200) {
-
-                                // Error from Mail Chimp or Campaign Monitor
-
-                                // Keep the current error text in a data attribute on the form
-                                formError.attr('original-error', formError.text());
-                                // Show the error with the returned error text.
-                                formError.html(data.msg).fadeIn(1000);
-                                formSuccess.fadeOut(1000);
-
-                                submitButton.html(submitButton.attr('data-text')).removeAttr('disabled');
-                            } else {
-
-                                // Got Success from Mail Chimp
-
-                                submitButton.html(submitButton.attr('data-text')).removeAttr('disabled');
-
-                                successRedirect = thisForm.attr('success-redirect');
-                                // For some browsers, if empty `successRedirect` is undefined; for others,
-                                // `successRedirect` is false.  Check for both.
-                                if (typeof successRedirect !== typeof undefined && successRedirect !== false && successRedirect !== "") {
-                                    window.location = successRedirect;
-                                }
-
-                                thisForm.find('input[type="text"]').val("");
-                                thisForm.find('textarea').val("");
-                                formSuccess.fadeIn(1000);
-
-                                formError.fadeOut(1000);
-                                setTimeout(function() {
-                                    formSuccess.fadeOut(500);
-                                }, 5000);
-                            }
-                        }
-                    });
-                }catch(err){
-                    // Keep the current error text in a data attribute on the form
-                    formError.attr('original-error', formError.text());
-                    // Show the error with the returned error text.
-                    formError.html(err.message).fadeIn(1000);
-                    formSuccess.fadeOut(1000);
-                    setTimeout(function() {
-                        formError.fadeOut(500);
-                    }, 5000);
-
-                    submitButton.html(submitButton.attr('data-text')).removeAttr('disabled');
-                }
-
-
-
-            } else {
-                formError.fadeIn(1000);
-                setTimeout(function() {
-                    formError.fadeOut(500);
-                }, 5000);
-            }
-        } else {
-            // If no iframe detected then this is treated as an email form instead.
-            console.log('Send email form detected.');
-            if (typeof originalError !== typeof undefined && originalError !== false) {
-                formError.text(originalError);
-            }
-
-            error = validateFields(thisForm);
-
-            if (error === 1) {
-                formError.fadeIn(200);
-                setTimeout(function() {
-                    formError.fadeOut(500);
-                }, 3000);
-            } else {
-
-                thisForm.removeClass('attempted-submit');
-
-                // Hide the error if one was shown
-                formError.fadeOut(200);
-
-                // Create a new loading spinner in the submit button.
-                submitButton.html(jQuery('<div />').addClass('form-loading')).attr('disabled', 'disabled');
-
-                jQuery.ajax({
-                    type: "POST",
-                    url: "mail/mail.php",
-                    data: thisForm.serialize()+"&url="+window.location.href,
-                    success: function(response) {
-                        // Swiftmailer always sends back a number representing numner of emails sent.
-                        // If this is numeric (not Swift Mailer error text) AND greater than 0 then show success message.
-
-                        submitButton.html(submitButton.attr('data-text')).removeAttr('disabled');
-
-                        if ($.isNumeric(response)) {
-                            if (parseInt(response) > 0) {
-                                // For some browsers, if empty 'successRedirect' is undefined; for others,
-                                // 'successRedirect' is false.  Check for both.
-                                successRedirect = thisForm.attr('success-redirect');
-                                if (typeof successRedirect !== typeof undefined && successRedirect !== false && successRedirect !== "") {
-                                    window.location = successRedirect;
-                                }
-
-
-                                thisForm.find('input[type="text"]').val("");
-                                thisForm.find('textarea').val("");
-                                thisForm.find('.form-success').fadeIn(1000);
-
-                                formError.fadeOut(1000);
-                                setTimeout(function() {
-                                    formSuccess.fadeOut(500);
-                                }, 5000);
-                            }
-                        }
-                        // If error text was returned, put the text in the .form-error div and show it.
-                        else {
-                            // Keep the current error text in a data attribute on the form
-                            formError.attr('original-error', formError.text());
-                            // Show the error with the returned error text.
-                            formError.text(response).fadeIn(1000);
-                            formSuccess.fadeOut(1000);
-                        }
-                    },
-                    error: function(errorObject, errorText, errorHTTP) {
-                        // Keep the current error text in a data attribute on the form
-                        formError.attr('original-error', formError.text());
-                        // Show the error with the returned error text.
-                        formError.text(errorHTTP).fadeIn(1000);
-                        formSuccess.fadeOut(1000);
-                        submitButton.html(submitButton.attr('data-text')).removeAttr('disabled');
-                    }
-                });
-            }
-        }
-        return false;
-    });
 
     $('.validate-required, .validate-email').on('blur change', function() {
         validateFields($(this).closest('form'));
@@ -802,15 +526,10 @@ $(document).ready(function() {
 
     //
     //
-    // End contact form code
+    // End form code
     //
     //
 
-
-    // Get referrer from URL string
-    if (getURLParameter("ref")) {
-        $('form.form-email').append('<input type="text" name="referrer" class="hidden" value="' + getURLParameter("ref") + '"/>');
-    }
 
     function getURLParameter(name) {
         return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
@@ -822,31 +541,6 @@ $(document).ready(function() {
         $('section').removeClass('parallax');
     }
 
-    // Disqus Comments
-
-    if($('.disqus-comments').length){
-		/* * * CONFIGURATION VARIABLES * * */
-		var disqus_shortname = $('.disqus-comments').attr('data-shortname');
-
-		/* * * DON'T EDIT BELOW THIS LINE * * */
-		(function() {
-			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		})();
-    }
-
-    // Load Google MAP API JS with callback to initialise when fully loaded
-    if(document.querySelector('[data-maps-api-key]') && !document.querySelector('.gMapsAPI')){
-        if($('[data-maps-api-key]').length){
-            var script = document.createElement('script');
-            var apiKey = $('[data-maps-api-key]:first').attr('data-maps-api-key');
-            script.type = 'text/javascript';
-            script.src = 'https://maps.googleapis.com/maps/api/js?key='+apiKey+'&callback=initializeMaps';
-            script.className = 'gMapsAPI';
-            document.body.appendChild(script);
-        }
-    }
 
 });
 
@@ -883,88 +577,13 @@ $(window).load(function() {
         msnry.layout();
     }
 
-    // Initialize twitter feed
-
-    var setUpTweets = setInterval(function() {
-        if ($('.tweets-slider').find('li.flex-active-slide').length) {
-            clearInterval(setUpTweets);
-            return;
-        } else {
-            if ($('.tweets-slider').length) {
-                $('.tweets-slider').flexslider({
-                    directionNav: false,
-                    controlNav: false
-                });
-            }
-        }
-    }, 500);
-
     mr_firstSectionHeight = $('.main-container section:nth-of-type(1)').outerHeight(true);
 
 
 });
 
 function updateNav() {
-
     var scrollY = mr_scrollTop;
-
-    if (scrollY <= 0) {
-        if (mr_navFixed) {
-            mr_navFixed = false;
-            mr_nav.removeClass('fixed');
-        }
-        if (mr_outOfSight) {
-            mr_outOfSight = false;
-            mr_nav.removeClass('outOfSight');
-        }
-        if (mr_navScrolled) {
-            mr_navScrolled = false;
-            mr_nav.removeClass('scrolled');
-        }
-        return;
-    }
-
-    if (scrollY > mr_firstSectionHeight) {
-        if (!mr_navScrolled) {
-            mr_nav.addClass('scrolled');
-            mr_navScrolled = true;
-            return;
-        }
-    } else {
-        if (scrollY > mr_navOuterHeight) {
-            if (!mr_navFixed) {
-                mr_nav.addClass('fixed');
-                mr_navFixed = true;
-            }
-
-            if (scrollY > mr_navOuterHeight * 2) {
-                if (!mr_outOfSight) {
-                    mr_nav.addClass('outOfSight');
-                    mr_outOfSight = true;
-                }
-            } else {
-                if (mr_outOfSight) {
-                    mr_outOfSight = false;
-                    mr_nav.removeClass('outOfSight');
-                }
-            }
-        } else {
-            if (mr_navFixed) {
-                mr_navFixed = false;
-                mr_nav.removeClass('fixed');
-            }
-            if (mr_outOfSight) {
-                mr_outOfSight = false;
-                mr_nav.removeClass('outOfSight');
-            }
-        }
-
-        if (mr_navScrolled) {
-            mr_navScrolled = false;
-            mr_nav.removeClass('scrolled');
-        }
-
-    }
 }
 
 function capitaliseFirstLetter(string) {
@@ -1011,11 +630,6 @@ function updateFloatingFilters() {
                 top: '16px',
                 bottom: 'auto'
             });
-            if (mr_navScrolled) {
-                section.filters.css({
-                    transform: 'translate3d(-50%,48px,0)'
-                });
-            }
             if (mr_scrollTop > (section.elemBottom - 70)) {
                 section.filters.css({
                     position: 'absolute',
@@ -2103,6 +1717,235 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
     });
   });
 
-
-
 }).call(this);
+
+
+
+/*================*/
+/* GLOBAL.js */
+/*================*/
+
+$(function() {
+
+    "use strict";
+
+    /*================*/
+    /* VARIABLES */
+    /*================*/
+    var swipers = [], winW, winH, winScr, _isphone, _istablet, _ismobile = navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i), _isFF = !!navigator.userAgent.match(/firefox/i);
+
+    /*========================*/
+    /* page calculations */
+    /*========================*/
+    _functions.pageCalculations = function(){
+        winW = $(window).width();
+        winH = $(window).height();
+        _isphone = $('.phone-marker').is(':visible') ? true : false;
+        _istablet = $('.tablet-marker').is(':visible') ? true : false;
+        $('nav').css({'height':winH});
+        var fullpageHeight = winH - $('header').not('.type-1').outerHeight() - $('footer').outerHeight();
+        $('.full-screen-height').css({'height':(fullpageHeight<500)?500:fullpageHeight});
+        $('html').css({'font-size':winW/70});
+        $('.rotate').each(function(){
+            $(this).width($(this).parent().height());
+        });
+    };
+
+    _functions.initSelect = function(){
+        if(!$('.SlectBox').length) return false;
+        $('.SlectBox').SumoSelect({ csvDispCount: 3, search: true, searchText:'Search', noMatch:'No matches for "{0}"', floatWidth: 0 });
+    };
+
+    /*=================================*/
+    /* function on document ready */
+    /*=================================*/
+    if(_ismobile) $('body').addClass('mobile');
+    _functions.pageCalculations();
+    _functions.initSelect();
+
+    /*============================*/
+    /* function on page load */
+    /*============================*/
+    $(window).on('load', function(){
+        _functions.initSwiper();
+        $('body').addClass('loaded');
+        $('#loader-wrapper').fadeOut();
+    });
+
+    /*==============================*/
+    /* function on page resize */
+    /*==============================*/
+    _functions.resizeCall = function(){
+        _functions.pageCalculations();
+    };
+    if(!_ismobile){
+        $(window).on('resize', function(){
+            _functions.resizeCall();
+        });
+    } else{
+        window.addEventListener("orientationchange", function() {
+            _functions.resizeCall();
+        }, false);
+    }
+
+    /*==============================*/
+    /* function on page scroll */
+    /*==============================*/
+    $(window).on('scroll', function(){
+        _functions.scrollCall();
+    });
+
+    _functions.scrollCall = function(){
+        winScr = $(window).scrollTop();
+        if(winScr>70) $('header').addClass('scrolled');
+        else $('header').removeClass('scrolled');
+    };
+
+    /*=====================*/
+    /* swiper sliders */
+    /*=====================*/
+    var initIterator = 0;
+    function setParams(swiper, dataValue, returnValue){
+        return (swiper.is('[data-'+dataValue+']'))?parseInt(swiper.data(dataValue), 10):returnValue;
+    }
+    _functions.initSwiper = function(){
+        $('.swiper-container').not('.initialized').each(function(){                               
+            var $t = $(this);   
+
+            var index = 'swiper-unique-id-'+initIterator;
+
+            $t.addClass('swiper-'+index+' initialized').attr('id', index);
+            $t.find('.swiper-pagination').addClass('swiper-pagination-'+index);
+            $t.parent().find('.swiper-button-prev').addClass('swiper-button-prev-'+index);
+            $t.parent().find('.swiper-button-next').addClass('swiper-button-next-'+index);
+
+            var slidesPerViewVar = setParams($t,'slides-per-view',1);
+            if(slidesPerViewVar!='auto') slidesPerViewVar = parseInt(slidesPerViewVar, 10);
+
+            swipers['swiper-'+index] = new Swiper('.swiper-'+index,{
+                pagination: '.swiper-pagination-'+index,
+                paginationClickable: true,
+                nextButton: '.swiper-button-next-'+index,
+                prevButton: '.swiper-button-prev-'+index,
+                slidesPerView: slidesPerViewVar,
+                autoHeight: setParams($t,'autoheight',0),
+                loop: setParams($t,'loop',0),
+                autoplay: setParams($t,'autoplay',0),
+                centeredSlides: setParams($t,'center',0),
+                breakpoints: ($t.is('[data-breakpoints]'))? { 767: { slidesPerView: parseInt($t.attr('data-xs-slides'), 10) }, 991: { slidesPerView: parseInt($t.attr('data-sm-slides'), 10) }, 1199: { slidesPerView: parseInt($t.attr('data-md-slides'), 10) }, 1370: { slidesPerView: parseInt($t.attr('data-lt-slides'), 10) } } : {},
+                initialSlide: setParams($t,'initialslide',0),
+                speed: setParams($t,'speed',500),
+                parallax: (_isFF)?0:setParams($t,'parallax',0),
+                slideToClickedSlide: setParams($t,'clickedslide',0),
+                mousewheelControl: setParams($t,'mousewheel',0),
+                direction: ($t.is('[data-direction]'))?$t.data('direction'):'horizontal',
+                spaceBetween: setParams($t,'space',0),
+                watchSlidesProgress: true,
+                keyboardControl: true,
+                mousewheelReleaseOnEdges: true,
+                preloadImages: false,
+                lazyLoading: true,
+                onTransitionEnd: function(swiper){
+                    var pageNum = (swiper.activeIndex+1<10)?('0'+(swiper.activeIndex+1)):(swiper.activeIndex+1);
+                    $t.find('.swiper-pager-current').text(pageNum);
+                },
+            });
+            swipers['swiper-'+index].update();
+            initIterator++;
+        });
+        $('.swiper-container.swiper-control-top').each(function(){
+            swipers['swiper-'+$(this).attr('id')].params.control = swipers['swiper-'+$(this).closest('.swipers-couple-wrapper').find('.swiper-control-bottom').attr('id')];
+        });
+        $('.swiper-container.swiper-control-bottom').each(function(){
+            swipers['swiper-'+$(this).attr('id')].params.control = swipers['swiper-'+$(this).closest('.swipers-couple-wrapper').find('.swiper-control-top').attr('id')];
+        });
+    };
+
+    $('.swiper-pager-arrow-prev').on('click', function(){
+        swipers['swiper-'+$(this).closest('.swiper-container').attr('id')].slidePrev();
+        return false;
+    });
+
+    $('.swiper-pager-arrow-next').on('click', function(){
+        swipers['swiper-'+$(this).closest('.swiper-container').attr('id')].slideNext();
+        return false;
+    });
+
+
+    /*==============================*/
+    /* buttons, clicks, hovers */
+    /*==============================*/
+
+    //open and close popup
+    _functions.openPopup = function(foo){
+        $('.popup-content').removeClass('active');
+        $('.popup-wrapper, .popup-content[data-rel="'+foo+'"]').addClass('active');
+        $('html').addClass('overflow-hidden');
+    };
+
+    _functions.closePopup = function(){
+        $('.popup-wrapper, .popup-content').removeClass('active');
+        $('html').removeClass('overflow-hidden');
+        $('.video-popup .popup-iframe').html('');
+    };
+
+    $(document).on('click', '.open-popup', function(e){
+        _functions.openPopup($(this).data('rel'));
+        return false;
+    });
+
+    $(document).on('click', '.popup-wrapper .button-close, .popup-wrapper .layer-close', function(e){
+        _functions.closePopup();
+        return false;
+    });
+
+    //video popup
+    $('.open-video').on('click', function(e){
+        $('.video-popup .popup-iframe').html('<iframe src="'+$(this).data('src')+'"></iframe>');
+        $('.popup-wrapper').addClass('active');
+        $('.video-popup').addClass('active');
+        return false;
+    });
+
+    //open ajax  popup
+    $(document).on('click', '.open-popup-ajax', function(e){
+        e.preventDefault();
+        $('html').addClass('overflow-hidden');
+        $('.popup-content').removeClass('active');
+        $('.popup-wrapper').addClass('active');
+        var url = $(this).attr('href');
+        $.ajax({
+            type:"GET",
+            async:true,
+            url: url,
+            success:function(response){
+                var responseObject = $($.parseHTML(response));
+                $('.ajax-popup .swiper-container').each(function(){
+                    swipers['swiper-'+$(this).attr('id')].destroy();
+                    delete swipers['swiper-'+$(this).attr('id')];
+                });
+                $('.ajax-popup').remove();
+                $('.popup-wrapper').append(responseObject.addClass('ajax-popup'));
+                _functions.initSwiper();
+                responseObject.addClass('active');
+                _functions.initSelect();
+            }
+        });
+        return false;
+    });
+
+    //hamburger menu
+    $('.hamburger-icon').on('click', function(){
+        $(this).toggleClass('active');
+        $('header').toggleClass('active');
+        return false;
+    });
+
+    //toggle submenu
+    $('.toggle-menu').on('click', function(){
+        $(this).toggleClass('active').next().slideToggle();
+        return false;
+    });
+
+
+});
