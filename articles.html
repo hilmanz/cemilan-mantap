@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Cemilan Mantap - Articles</title>
+        <title>Cemilan Mantap - Directory Detail</title>
         <meta name="viewport" content="width=device-width, initial-scale=0.9">
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
@@ -16,38 +16,41 @@
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
     </head>
     <body>
-        <div class="nav-container">
-            <a id="top"></a>
-            <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">MENU</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#"><img class="img-responsive" alt="Cemilan Mantap" src="img/brand/logo-cemilan-mantap.png"></a>
-                    </div>
-                    <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
-                        <div class="col-md-8 col-xs-12 nav-wrap">
-                            <ul class="nav navbar-nav">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="tentang.html">Tentang Cemilan</a></li>
-                                <li><a href="directory.html">Directory</a></li>
-                                <li><a href="videos.html">Videos</a></li>
-                                <li><a href="articles.html">Articles</a></li>
-                            </ul>
-                        </div>
-                        <div class="logo-kanan hidden-sm hidden-xs">
-                            <ul class="nav navbar-nav">
-                                <li><img src="img/cup-top-right.png" alt="" class="hidden-sm hidden-xs"></li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- LOADER -->
+        <div id="loader-wrapper"></div>
+        <!-- HEADER -->
+        <header class="stay-top">
+            <div class="header-wrapper">
+                <a id="logo" href="index.html"><img alt="Cemilan Mantap" src="img/brand/logo-cemilan-mantap.png"></a>
+                <div id="logo-2"><img src="img/cup-top-right.png" alt="Kopi ABC"></div>
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </nav>
-        </div>
+            </div>
+        
+            <div class="navigation-wrapper">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="tentang.html">Tentang Cemilan</a>
+                        </li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li>
+                            <a href="videos.html">Videos</a>
+                        </li>
+                        <li class="active">
+                            <a href="articles.html">Articles</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <div class="main-container bg-secondary">
             <section class="page-title page-title-3 pt120">
                 <div class="container">
@@ -177,7 +180,6 @@
         </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/flickr.js"></script>
         <script src="js/flexslider.min.js"></script>
         <script src="js/lightbox.min.js"></script>
         <script src="js/masonry.min.js"></script>

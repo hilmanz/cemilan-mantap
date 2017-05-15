@@ -15,56 +15,72 @@
         <link href="css/font-bebas.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/font-opensans.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/jssocials.css" rel="stylesheet" type="text/css"  />
+        <link href="css/jssocials-theme-flat.css" rel="stylesheet" type="text/css"  />
+
+        <!-- Rating -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link href="vendor/j-rating/j-rating.css" type="text/css" rel="stylesheet" />
+        <!-- End Rating -->
+
+        <!-- UPLOAD IMAGE -->
+        <link type="text/css" href="vendor/orakuploader/orakuploader.css" rel="stylesheet"/>
+        <script type="text/javascript" src="vendor/orakuploader/jquery.min.js"></script>
+        <script type="text/javascript" src="vendor/orakuploader/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="vendor/orakuploader/orakuploader.js"></script>
+        <!-- END UPLAOD IMAGE -->
     </head>
     <body>
-        <div class="nav-container">
-            <a id="top"></a>
-            <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">MENU</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#"><img class="img-responsive" alt="Cemilan Mantap" src="img/brand/logo-cemilan-mantap.png"></a>
-                    </div>
-                    <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
-                        <div class="col-md-8 col-xs-12 nav-wrap">
-                            <ul class="nav navbar-nav">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="tentang.html">Tentang Cemilan</a></li>
-                                <li><a href="directory.html">Directory</a></li>
-                                <li><a href="videos.html">Videos</a></li>
-                                <li><a href="articles.html">Articles</a></li>
-                            </ul>
-                        </div>
-                        <div class="logo-kanan hidden-sm hidden-xs">
-                            <ul class="nav navbar-nav">
-                                <li><img src="img/cup-top-right.png" alt="" class="hidden-sm hidden-xs"></li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- LOADER -->
+        <div id="loader-wrapper"></div>
+        <!-- HEADER -->
+        <header class="stay-top">
+            <div class="header-wrapper">
+                <a id="logo" href="index.html"><img alt="Cemilan Mantap" src="img/brand/logo-cemilan-mantap.png"></a>
+                <div id="logo-2"><img src="img/cup-top-right.png" alt="Kopi ABC"></div>
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </nav>
-        </div>
+            </div>
+        
+            <div class="navigation-wrapper">
+                <nav>
+                    <ul>
+                        <li class="active">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="tentang.html">Tentang Cemilan</a>
+                        </li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li>
+                            <a href="videos.html">Videos</a>
+                        </li>
+                        <li>
+                            <a href="articles.html">Articles</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <div class="main-container">
             <section class="fullscreen image-bg">
                 <div class="background-image-holder">
                     <img alt="image" class="background-image" src="img/background/bkg-geometric.png" />
                 </div>
-                <!-- DESKTOP ONLY -->
-                <div class="hidden-md hidden-sm hidden-xs">
-                    <div class="align-bottom">
+                <div class="align-bottom">
+                    <div class="gisel-gading-wrapper">
                         <div class="row">
-                            <div class="col-lg-3 col-lg-push-1 text-right mt120">
+                            <div class="col-lg-3 col-lg-push-1 text-right big-pilih-selera">
                                 <a href="pilih-seleramu.html" title="Pilih Seleramu"><img src="img/pilih-seleramu.png" class="hvr-wobble-horizontal" alt="Pilih Seleramu"></a>
                             </div>
-                            <div class="col-lg-5 ">
+                            <div class="col-lg-5">
                                 <div class="v-align-children">
                                     <div class="versus">
-                                        <img src="img/versus.png">
+                                        <img src="img/versus.png" id="versus-home">
                                     </div>
                                     <div class="gisel-animate">
                                         <a href="pastimanis.html"><img src="img/gisel-cerai.png" class="hvr-grow" alt="Gisel - Cemilan Mantap"></a>
@@ -75,7 +91,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-4">
-                                <h6 class="uppercase lead text-shadowed-white mt96">
+                                <h6 class="headline-home uppercase lead mt80">
                                     Welcome #TemanMantap, inilah layanan direktori
                                     berbagai #CemilanMantap yang dapat dinikmati bareng kopi.
                                     Kamu juga bisa tentukan lebih suka #PASTIMANIS
@@ -94,35 +110,6 @@
                         
                     </div>
                 </div>
-                <!-- END DESKTOP -->
-
-                <!-- MOBILE -->
-                <div class="hidden-lg visible-sm visible-md visible-xs">
-
-                    
-                    <div class="align-bottom">
-                    <div class="container v-align-children">
-                        <div class="row">
-                            <div class="col-xs-3 col-xs-offset-1">
-                                <a href="pastimanis.html"><h4 class="color-red">#PASTIMANIS<br>
-                                    <span class="color-white">TIM GISEL</span>
-                                </h4></a>
-                            </div>
-                            <div class="col-xs-3 col-xs-offset-4 col-sm-3 col-sm-offset-5">
-                                <a href="gurihmantap.html"><h4 class="color-red">#GURIHMANTAP<br>
-                                    <span class="color-white">TIM GADING</span>
-                                </h4></a>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="row">
-                            <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-                                <img src="img/gisel-vs-gading.png" alt="Gisel vs Gading">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- END MOBILE ONLY -->
 
                 <div class="align-bottom text-center mb48 mb-xs-8">
                     <div class="container">
@@ -404,7 +391,7 @@
                             </div>
                         </div>
                         <div class="col-sm-4 p0">
-                            <div class="feature boxed bordered mt120 mb0 mt-xs-0 mb-xs-8">
+                            <div class="feature feature-text-right boxed bordered mt120 mb0 mt-xs-0 mb-xs-8">
                                 <h1 class="color-orange mb0 mb-xs-24"><a href="directory-detail.html">ROPISBAK</a></h1>
                                 <div class="food-location">
                                     <span class="glyphicon glyphicon-map-marker"></span>
@@ -414,7 +401,10 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                                 </p>
                                 <div class="left">
-                                    <i class="fa fa-mail-forward fa-2x fa-pull-left fa-border" aria-hidden="true"></i>
+                                     <a href="#" class="show-pop-sharer" data-animation="pop" data-placement="auto-top"><i class="fa fa-mail-forward fa-2x fa-pull-left fa-border" aria-hidden="true"></i></a>
+                                     <div id="sharerContent" style="display:none;">
+                                        <div id="shareIconsCount"></div>
+                                    </div>
                                     <i class="fa fa-star-o fa-2x fa-pull-left fa-border" aria-hidden="true"></i>
                                 </div>
                             </div>
@@ -439,7 +429,10 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                                 </p>
                                 <div class="left">
-                                    <i class="fa fa-mail-forward fa-2x fa-pull-left fa-border" aria-hidden="true"></i>
+                                    <a href="#" class="show-pop-sharer" data-animation="pop" data-placement="auto-top"><i class="fa fa-mail-forward fa-2x fa-pull-left fa-border" aria-hidden="true"></i></a>
+                                    <div id="sharerContent" style="display:none;">
+                                        <div id="shareIconsCount"></div>
+                                    </div>
                                     <i class="fa fa-star-o fa-2x fa-pull-left fa-border" aria-hidden="true"></i>
                                 </div>
                             </div>
@@ -504,9 +497,8 @@
                 <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
             </footer>
         </div>
-        <script src="js/jquery.min.js"></script>
+        
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/flickr.js"></script>
         <script src="js/flexslider.min.js"></script>
         <script src="js/lightbox.min.js"></script>
         <script src="js/masonry.min.js"></script>
@@ -514,8 +506,12 @@
         <script src="js/smooth-scroll.min.js"></script>
         <script src="js/parallax.js"></script>
         <script src="js/scripts.js"></script>
-
+        <script src="vendor/j-rating/j-rating.js"></script>
+        <script src="js/jssocials.min.js"></script>
+        <script src="js/jquery.webui-popover.min.js"></script> 
         <script>
+        
+
         // PIE Charts
         // ======================
 
@@ -541,6 +537,29 @@
             $chart.css('margin-left', - $chart.attr('data-size') / 2 );
         });
 
-      	</script>
+        // Social Share
+        $("#shareIconsCount").jsSocials({
+            //url: "http://www.cemilanmantap.com",
+            //text: "Cemilan Mantap",
+            showLabel: false,
+            showCount: true,
+            shares: ["facebook"]
+        });
+
+        (function(){
+            function initPopover(){                 
+                var sharerContent = $('#sharerContent').html(),
+                    sharerSettings = {content:sharerContent,
+                                        width:150,
+                                        height:85,
+                                        padding:true,
+                                        delay:{show:300,hide:1000},
+                                        closeable:true
+                                    };
+                var popSharer = $('a.show-pop-sharer').webuiPopover('destroy').webuiPopover($.extend({},sharerSettings));
+            }
+            initPopover();
+        })();
+        </script>
     </body>
 </html>

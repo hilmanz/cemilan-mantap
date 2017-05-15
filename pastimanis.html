@@ -16,65 +16,67 @@
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
     </head>
     <body>
-        <div class="nav-container">
-            <a id="top"></a>
-            <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">MENU</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#"><img class="img-responsive" alt="Cemilan Mantap" src="img/brand/logo-cemilan-mantap.png"></a>
-                    </div>
-                    <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
-                        <div class="col-md-8 col-xs-12 nav-wrap">
-                            <ul class="nav navbar-nav">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="tentang.html">Tentang Cemilan</a></li>
-                                <li><a href="directory.html">Directory</a></li>
-                                <li><a href="videos.html">Videos</a></li>
-                                <li><a href="articles.html">Articles</a></li>
-                            </ul>
-                        </div>
-                        <div class="logo-kanan hidden-sm hidden-xs">
-                            <ul class="nav navbar-nav">
-                                <li><img src="img/cup-top-right.png" alt="" class="hidden-sm hidden-xs"></li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- LOADER -->
+        <div id="loader-wrapper"></div>
+        <!-- HEADER -->
+        <header class="stay-top">
+            <div class="header-wrapper">
+                <a id="logo" href="index.html"><img alt="Cemilan Mantap" src="img/brand/logo-cemilan-mantap.png"></a>
+                <div id="logo-2"><img src="img/cup-top-right.png" alt="Kopi ABC"></div>
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </nav>
-        </div>
+            </div>
+        
+            <div class="navigation-wrapper">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="tentang.html">Tentang Cemilan</a>
+                        </li>
+                        <li class="active"><a href="directory.html">Directory</a></li>
+                        <li>
+                            <a href="videos.html">Videos</a>
+                        </li>
+                        <li>
+                            <a href="articles.html">Articles</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <div class="main-container">
             <section class="fullscreen image-bg">
                 <div class="background-image-holder">
                     <img alt="image" class="background-image" src="img/ttg_header_bkg.jpg" />
                 </div>
                 <div class="align-bottom">
-                    <div class="v-align-children">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-4 col-lg-pull-3 col-md-4 col-md-pull-2 col-xs-6 col-xs-offset-3">
-                                    <img src="img/header_pastimanis_gisel.png" alt="Gisel - Pasti Manis">
-                                </div>
-                                <div class="col-lg-5 col-lg-pull-2 col-sm-6 col-md-5 col-md-pull-1 mt120 mt-xs-0 text-center-xs">
+                    <div class="pilihannya">
+                        <div class="image-edge">
+                            <div class="col-md-6 col-sm-5 col-xs-6 p0 mb-xs-24">
+                                <img alt="image" src="img/gisel_meja.png" />
+                            </div>
+                            <div class="container">
+                                <div class="col-md-5 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 v-align-transform right">
                                     <div class="row">
-                                        <div class="col-sm-6 col-sm-pull-3 col-xs-6 col-xs-offset-3">
-                                            <h3 class="text-center bg-orange color-white">#PastiManis</h3>
-                                        </div>
+                                        <h3 class="text-center bg-orange color-white col-md-5 col-sm-5 col-xs-9 col-xs-push-2">#PastiManis</h3>
                                     </div>
                                     <p class="color-body text-center-xs">
                                         Pilihan <span class="bold color-body">#TemanMantap</span> yang lebih suka cemilan <span class="bold color-body">#PastiManis</span> untuk temani nikmatnya kopi ABC, serta mendukung dan menjadi <span class="bold color-body">TIM GISEL</span>. Submit #CemilanMantap mu sekaligus bantu dagangan mereka dengan hashtag wajib <span class="bold color-body">#CemilanMantap #PASTIMANIS</span> untuk memenangkan Roadshow.<br>Pilih Seleramu, Dukung Cemilanmu!
                                     </p>
-                                    <a class="btn btn-grey mb32" href="pilih-seleramu.html">PILIH</a>
-                                </div>
+                                    <div class="text-center-xs">
+                                        <a class="btn btn-grey mb32" href="pilih-seleramu.html">PILIH</a>
+                                    </div>
+                                </div> 
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
             <section class="pb32 bg-white">
@@ -280,7 +282,6 @@
         </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/flickr.js"></script>
         <script src="js/flexslider.min.js"></script>
         <script src="js/lightbox.min.js"></script>
         <script src="js/masonry.min.js"></script>
