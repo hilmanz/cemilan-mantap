@@ -18,39 +18,34 @@
     <body>
         <div class="nav-container">
             <a id="top"></a>
-            <nav class="navbar navbar-inverse nav-centered absolute transparent custom-navbar" role="navigation">
-              <div class="container">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
-                  <span class="sr-only">MENU</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <div class="navbar-header">
-                  <a class="navbar-brand" rel="home" href="#" title="Cemilan Mantap">
-                    <img alt="Cemilan Mantap" src="img/brand/logo-cemilan-mantap.png">
-                  </a>
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">MENU</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img class="img-responsive" alt="Cemilan Mantap" src="img/brand/logo-cemilan-mantap.png"></a>
+                    </div>
+                    <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+                        <div class="col-md-8 col-xs-12 nav-wrap">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="tentang.html">Tentang Cemilan</a></li>
+                                <li><a href="directory.html">Directory</a></li>
+                                <li><a href="videos.html">Videos</a></li>
+                                <li><a href="articles.html">Articles</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-kanan hidden-sm hidden-xs">
+                            <ul class="nav navbar-nav">
+                                <li><img src="img/cup-top-right.png" alt="" class="hidden-sm hidden-xs"></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Non-collapsing right-side icons -->
-                <div class="navbar-right">
-                  <img src="img/cup-top-right.png" alt="Kopi ABC">
-                </div>
-                
-                <!-- the collapsing menu -->
-                <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                  <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tentang.html">Tentang Cemilan</a></li>
-                    <li class="active"> <a href="directory.html">Directory</a></li>
-                    <li> <a href="videos.html">Videos</a></li>
-                    <li><a href="articles.html">Articles</a></li>
-                  </ul>
-                </div>
-                <!--/.nav-collapse -->
-                
-              </div>
-              <!--/.container -->
             </nav>
         </div>
         <div class="main-container">
@@ -59,24 +54,27 @@
                     <img alt="image" class="background-image" src="img/ttg_header_bkg.jpg" />
                 </div>
                 <div class="align-bottom">
-                    <div class="image-square left">
-                        <div class="col-md-6 image">
-                            <div class="background-image-holder">
-                                <img alt="image" class="background-image" src="img/gisel_meja.png" />
-                            </div>
-                        </div>
-                        <div class="col-md-6 content">
+                    <div class="v-align-children">
+                        <div class="container">
                             <div class="row">
-                                <div class="col-sm-6 col-sm-pull-3 col-xs-6 col-xs-offset-3">
-                                    <h3 class="text-center bg-orange color-white">#PastiManis</h3>
+                                <div class="col-lg-4 col-lg-pull-3 col-md-4 col-md-pull-2 col-xs-6 col-xs-offset-3">
+                                    <img src="img/header_pastimanis_gisel.png" alt="Gisel - Pasti Manis">
+                                </div>
+                                <div class="col-lg-5 col-lg-pull-2 col-sm-6 col-md-5 col-md-pull-1 mt120 mt-xs-0 text-center-xs">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-pull-3 col-xs-6 col-xs-offset-3">
+                                            <h3 class="text-center bg-orange color-white">#PastiManis</h3>
+                                        </div>
+                                    </div>
+                                    <p class="color-body text-center-xs">
+                                        Pilihan <span class="bold color-body">#TemanMantap</span> yang lebih suka cemilan <span class="bold color-body">#PastiManis</span> untuk temani nikmatnya kopi ABC, serta mendukung dan menjadi <span class="bold color-body">TIM GISEL</span>. Submit #CemilanMantap mu sekaligus bantu dagangan mereka dengan hashtag wajib <span class="bold color-body">#CemilanMantap #PASTIMANIS</span> untuk memenangkan Roadshow.<br>Pilih Seleramu, Dukung Cemilanmu!
+                                    </p>
+                                    <a class="btn btn-grey mb32" href="pilih-seleramu.html">PILIH</a>
                                 </div>
                             </div>
-                            <p class="color-body text-center-xs">
-                                Pilihan <span class="bold color-body">#TemanMantap</span> yang lebih suka cemilan <span class="bold color-body">#PastiManis</span> untuk temani nikmatnya kopi ABC, serta mendukung dan menjadi <span class="bold color-body">TIM GISEL</span>. Submit #CemilanMantap mu sekaligus bantu dagangan mereka dengan hashtag wajib <span class="bold color-body">#CemilanMantap #PASTIMANIS</span> untuk memenangkan Roadshow.<br>Pilih Seleramu, Dukung Cemilanmu!
-                            </p>
-                            <a class="btn btn-grey mb32" href="pilih-seleramu.html">PILIH</a>
                         </div>
                     </div>
+
                 </div>
             </section>
             <section class="pb32 bg-white">
@@ -282,6 +280,7 @@
         </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/flickr.js"></script>
         <script src="js/flexslider.min.js"></script>
         <script src="js/lightbox.min.js"></script>
         <script src="js/masonry.min.js"></script>

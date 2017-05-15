@@ -9,14 +9,11 @@
         <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/jquery.webui-popover.min.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/font-bebas.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/font-opensans.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/jssocials.css" rel="stylesheet" type="text/css"  />
-        <link href="css/jssocials-theme-flat.css" rel="stylesheet" type="text/css"  />
 
         <!-- Rating -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -27,39 +24,34 @@
     <body>
         <div class="nav-container">
             <a id="top"></a>
-            <nav class="navbar navbar-inverse nav-centered absolute transparent custom-navbar" role="navigation">
-              <div class="container">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
-                  <span class="sr-only">MENU</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <div class="navbar-header">
-                  <a class="navbar-brand" rel="home" href="#" title="Cemilan Mantap">
-                    <img alt="Cemilan Mantap" src="img/brand/logo-cemilan-mantap.png">
-                  </a>
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">MENU</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img class="img-responsive" alt="Cemilan Mantap" src="img/brand/logo-cemilan-mantap.png"></a>
+                    </div>
+                    <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+                        <div class="col-md-8 col-xs-12 nav-wrap">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="tentang.html">Tentang Cemilan</a></li>
+                                <li><a href="directory.html">Directory</a></li>
+                                <li><a href="videos.html">Videos</a></li>
+                                <li><a href="articles.html">Articles</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-kanan hidden-sm hidden-xs">
+                            <ul class="nav navbar-nav">
+                                <li><img src="img/cup-top-right.png" alt="" class="hidden-sm hidden-xs"></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Non-collapsing right-side icons -->
-                <div class="navbar-right">
-                  <img src="img/cup-top-right.png" alt="Kopi ABC">
-                </div>
-                
-                <!-- the collapsing menu -->
-                <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                  <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tentang.html">Tentang Cemilan</a></li>
-                    <li class="active"> <a href="directory.html">Directory</a></li>
-                    <li> <a href="videos.html">Videos</a></li>
-                    <li><a href="articles.html">Articles</a></li>
-                  </ul>
-                </div>
-                <!--/.nav-collapse -->
-                
-              </div>
-              <!--/.container -->
             </nav>
         </div>
         <div class="main-container">
@@ -68,7 +60,6 @@
                     <div class="row">
                         <div class="col-md-9 mb-xs-24">
                             <div class="post-snippet mb64">
-                            
                                  <div class="directory-detail-image mb-xs-32">
                                     <div id="directory-slider" class="flexslider">
                                         <div class="directory-caption">
@@ -78,10 +69,7 @@
                                                 </h4>
                                             </div>
                                             <div class="review-rating">
-                                                <a href="#" class="show-pop-sharer" data-animation="pop" data-placement="auto-top"><i class="fa fa-mail-forward fa-pull-left fa-border" aria-hidden="true"></i></a>
-                                                <div id="sharerContent" style="display:none;">
-                                                    <div id="shareIconsCount"></div>
-                                                </div>
+                                                <i class="fa fa-mail-forward fa-pull-left fa-border" aria-hidden="true"></i>
                                                 <i class="fa fa-star-o fa-pull-left fa-border" aria-hidden="true"></i>
                                             </div>
                                             <div class="icon-box-waktu">
@@ -451,10 +439,10 @@
                     <!--end of row-->
                 <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
             </footer>
-        
         </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/flickr.js"></script>
         <script src="js/flexslider.min.js"></script>
         <script src="js/lightbox.min.js"></script>
         <script src="js/masonry.min.js"></script>
@@ -463,44 +451,16 @@
         <script src="js/parallax.js"></script>
         <script src="js/scripts.js"></script>
         <script src="vendor/j-rating/j-rating.js"></script>
-        <script src="js/jssocials.min.js"></script>
-        <script src="js/jquery.webui-popover.min.js"></script> 
+
         <script>
             /* RATING */
             $("#directory-star-detail").jRating({
                 stars: 5,
                 size: "20px",
                 buttons_color: "red",
-                active_color: "white",
+                active_color: "purple",
                 text: true
             });
-        </script>
-        <script>
-            // Social Share
-            $("#shareIconsCount").jsSocials({
-                //url: "http://www.cemilanmantap.com",
-                //text: "Cemilan Mantap",
-                showLabel: false,
-                showCount: true,
-                shares: ["facebook"]
-            });
-        </script>
-
-        <script>
-            (function(){
-                function initPopover(){                 
-                    var sharerContent = $('#sharerContent').html(),
-                        sharerSettings = {content:sharerContent,
-                                            width:150,
-                                            height:85,
-                                            padding:true,
-                                            delay:{show:300,hide:1000},
-                                            closeable:true
-                                        };
-                    var popSharer = $('a.show-pop-sharer').webuiPopover('destroy').webuiPopover($.extend({},sharerSettings));
-                }
-                initPopover();
-            })();
         </script>
     </body>
 </html>

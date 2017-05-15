@@ -18,39 +18,34 @@
     <body>
         <div class="nav-container">
             <a id="top"></a>
-            <nav class="navbar navbar-inverse nav-centered absolute transparent custom-navbar" role="navigation">
-              <div class="container">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
-                  <span class="sr-only">MENU</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <div class="navbar-header">
-                  <a class="navbar-brand" rel="home" href="#" title="Cemilan Mantap">
-                    <img alt="Cemilan Mantap" src="img/brand/logo-cemilan-mantap.png">
-                  </a>
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">MENU</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img class="img-responsive" alt="Cemilan Mantap" src="img/brand/logo-cemilan-mantap.png"></a>
+                    </div>
+                    <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+                        <div class="col-md-8 col-xs-12 nav-wrap">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="tentang.html">Tentang Cemilan</a></li>
+                                <li><a href="directory.html">Directory</a></li>
+                                <li><a href="videos.html">Videos</a></li>
+                                <li><a href="articles.html">Articles</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-kanan hidden-sm hidden-xs">
+                            <ul class="nav navbar-nav">
+                                <li><img src="img/cup-top-right.png" alt="" class="hidden-sm hidden-xs"></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Non-collapsing right-side icons -->
-                <div class="navbar-right">
-                  <img src="img/cup-top-right.png" alt="Kopi ABC">
-                </div>
-                
-                <!-- the collapsing menu -->
-                <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                  <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="tentang.html">Tentang Cemilan</a></li>
-                    <li> <a href="directory.html">Directory</a></li>
-                    <li> <a href="videos.html">Videos</a></li>
-                    <li><a href="articles.html">Articles</a></li>
-                  </ul>
-                </div>
-                <!--/.nav-collapse -->
-                
-              </div>
-              <!--/.container -->
             </nav>
         </div>
         <div class="main-container">
@@ -61,7 +56,7 @@
 				<div class="container">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 text-center p0">
-                            <img src="img/ttg_gisel-gading_02.png" alt="Gisel + Gading">
+                            <img src="img/ttg_gisel-gading.png" alt="Gisel + Gading">
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <h1 class="color-red text-center-xs mt40 mt-xs-32">PILIH SELERAMU</h1>
@@ -105,21 +100,6 @@
                                     <p class="small color-body">50 Voucher<br>IDR 200.000</p>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                    <!--end of row-->
-
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <h1 class="color-red text-center mt40 mt-xs-32">ABOUT PROGRAM</h1>
-                            <p class="color-body">
-                                <span class="color-body bold lead">Where does it come from?</span><br>
-                                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                            </p>
-                            <p class="color-body">
-                                <span class="color-body bold lead">Where can I get some?</span><br>
-                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-                            </p>
                         </div>
                     </div>
                     <!--end of row-->
@@ -271,6 +251,7 @@
         </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/flickr.js"></script>
         <script src="js/flexslider.min.js"></script>
         <script src="js/lightbox.min.js"></script>
         <script src="js/masonry.min.js"></script>

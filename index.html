@@ -15,59 +15,39 @@
         <link href="css/font-bebas.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/font-opensans.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/jssocials.css" rel="stylesheet" type="text/css"  />
-        <link href="css/jssocials-theme-flat.css" rel="stylesheet" type="text/css"  />
-
-        <!-- Rating -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <link href="vendor/j-rating/j-rating.css" type="text/css" rel="stylesheet" />
-        <!-- End Rating -->
-
-        <!-- UPLOAD IMAGE -->
-        <link type="text/css" href="vendor/orakuploader/orakuploader.css" rel="stylesheet"/>
-        <script type="text/javascript" src="vendor/orakuploader/jquery.min.js"></script>
-        <script type="text/javascript" src="vendor/orakuploader/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="vendor/orakuploader/orakuploader.js"></script>
-        <!-- END UPLAOD IMAGE -->
     </head>
     <body>
         <div class="nav-container">
             <a id="top"></a>
-            <nav class="navbar navbar-inverse nav-centered absolute transparent custom-navbar" role="navigation">
-              <div class="container">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
-                  <span class="sr-only">MENU</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <div class="navbar-header">
-                  <a class="navbar-brand" rel="home" href="#" title="Cemilan Mantap">
-                    <img alt="Cemilan Mantap" src="img/brand/logo-cemilan-mantap.png">
-                  </a>
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">MENU</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img class="img-responsive" alt="Cemilan Mantap" src="img/brand/logo-cemilan-mantap.png"></a>
+                    </div>
+                    <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+                        <div class="col-md-8 col-xs-12 nav-wrap">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="tentang.html">Tentang Cemilan</a></li>
+                                <li><a href="directory.html">Directory</a></li>
+                                <li><a href="videos.html">Videos</a></li>
+                                <li><a href="articles.html">Articles</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-kanan hidden-sm hidden-xs">
+                            <ul class="nav navbar-nav">
+                                <li><img src="img/cup-top-right.png" alt="" class="hidden-sm hidden-xs"></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Non-collapsing right-side icons -->
-                <div class="navbar-right">
-                  <img src="img/cup-top-right.png" alt="Kopi ABC">
-                </div>
-                
-                <!-- the collapsing menu -->
-                <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                  <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="tentang.html">Tentang Cemilan</a></li>
-                    <li> <a href="directory.html">Directory</a></li>
-                    <li> <a href="videos.html">Videos</a></li>
-                    <li><a href="articles.html">Articles</a></li>
-                  </ul>
-                </div>
-                <!--/.nav-collapse -->
-                
-              </div>
-              <!--/.container -->
             </nav>
-
         </div>
         <div class="main-container">
             <section class="fullscreen image-bg">
@@ -81,7 +61,7 @@
                             <div class="col-lg-3 col-lg-push-1 text-right mt120">
                                 <a href="pilih-seleramu.html" title="Pilih Seleramu"><img src="img/pilih-seleramu.png" class="hvr-wobble-horizontal" alt="Pilih Seleramu"></a>
                             </div>
-                            <div class="col-lg-5">
+                            <div class="col-lg-5 ">
                                 <div class="v-align-children">
                                     <div class="versus">
                                         <img src="img/versus.png">
@@ -95,7 +75,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-4">
-                                <h6 class="uppercase lead mt80">
+                                <h6 class="uppercase lead text-shadowed-white mt96">
                                     Welcome #TemanMantap, inilah layanan direktori
                                     berbagai #CemilanMantap yang dapat dinikmati bareng kopi.
                                     Kamu juga bisa tentukan lebih suka #PASTIMANIS
@@ -118,24 +98,26 @@
 
                 <!-- MOBILE -->
                 <div class="hidden-lg visible-sm visible-md visible-xs">
-                    <div class="row">
-                        <div class="col-md-3 col-md-offset-1 col-sm-6 col-sm-offset-4 col-xs-8 col-xs-offset-2 mt64 mt-xs-96">
-                            <a href="pilih-seleramu.html" title="Pilih Seleramu"><img src="img/pilih-seleramu.png" class="hvr-wobble-horizontal" alt="Pilih Seleramu"></a>
+
+                    
+                    <div class="align-bottom">
+                    <div class="container v-align-children">
+                        <div class="row">
+                            <div class="col-xs-3 col-xs-offset-1">
+                                <a href="pastimanis.html"><h4 class="color-red">#PASTIMANIS<br>
+                                    <span class="color-white">TIM GISEL</span>
+                                </h4></a>
+                            </div>
+                            <div class="col-xs-3 col-xs-offset-4 col-sm-3 col-sm-offset-5">
+                                <a href="gurihmantap.html"><h4 class="color-red">#GURIHMANTAP<br>
+                                    <span class="color-white">TIM GADING</span>
+                                </h4></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="align-bottom">
                         <div class="row">
-                            <div class="col-md-12">
-                                <img src="img/gisel-vs-gading_map_02.png" id="gisel_gading_map" usemap="#gisel_gading_map" alt="Gisel vs Gading">
-                                
-                                <map name="gisel_gading_map" id="gisel_gading_map">
-                                <area shape="rect" coords="1278,935,1280,937" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
-                                <area id="pastiManis" alt="Tim Gisel #PASTIMANIS" title="Tim Gisel" href="pastimanis.html" shape="poly" coords="378,479,6,538,6,691,355,637,373,594,371,553,389,521" style="outline:none;" target="_self"     />
-                                <area id="TimGisel" alt="Tim Gisel" title="Tim Gisel" href="pastimanis.html" shape="poly" coords="297,935,476,935,483,843,527,799,547,764,555,744,559,715,561,691,564,662,558,641,544,640,542,589,536,577,539,519,626,512,618,420,610,378,614,358,619,323,629,307,645,277,660,250,668,211,662,181,655,163,645,149,633,142,624,139,609,122,593,116,575,116,547,119,515,135,502,156,485,172,479,197,472,210,465,242,471,251,476,258,458,317,408,341,352,383,373,324,398,278,446,238,467,198,416,187,370,244,319,349,288,419,288,456,312,465,374,443,389,513,355,632,354,703,366,724,365,764" style="outline:none;" target="_self"     />
-                                <area id="TimGading" alt="Tim gading" title="Tim Gading" href="gurihmantap.html" shape="poly" coords="619,93,669,189,664,259,627,321,625,375,612,396,626,479,637,517,687,508,704,515,704,545,680,547,680,561,700,574,691,616,680,627,635,635,625,666,648,753,677,876,674,921,851,922,859,898,862,713,860,657,851,612,855,511,848,466,846,395,869,384,940,381,944,348,968,320,971,303,940,295,908,236,877,162,852,130,800,149,785,97,771,49,708,8,633,37" style="outline:none;" target="_self"     />
-                                <area id="GurihMantap" alt="Gurih Mantap" title="Gurih Mantap" href="gurihmantap.html" shape="poly" coords="859,506,865,562,856,621,860,655,1278,588,1279,435" style="outline:none;" target="_self"     />
-                                </map>
-
+                            <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+                                <img src="img/gisel-vs-gading.png" alt="Gisel vs Gading">
                             </div>
                         </div>
                     </div>
@@ -422,7 +404,7 @@
                             </div>
                         </div>
                         <div class="col-sm-4 p0">
-                            <div class="feature feature-text-right boxed bordered mt120 mb0 mt-xs-0 mb-xs-8">
+                            <div class="feature boxed bordered mt120 mb0 mt-xs-0 mb-xs-8">
                                 <h1 class="color-orange mb0 mb-xs-24"><a href="directory-detail.html">ROPISBAK</a></h1>
                                 <div class="food-location">
                                     <span class="glyphicon glyphicon-map-marker"></span>
@@ -432,10 +414,7 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                                 </p>
                                 <div class="left">
-                                     <a href="#" class="show-pop-sharer" data-animation="pop" data-placement="auto-top"><i class="fa fa-mail-forward fa-2x fa-pull-left fa-border" aria-hidden="true"></i></a>
-                                     <div id="sharerContent" style="display:none;">
-                                        <div id="shareIconsCount"></div>
-                                    </div>
+                                    <i class="fa fa-mail-forward fa-2x fa-pull-left fa-border" aria-hidden="true"></i>
                                     <i class="fa fa-star-o fa-2x fa-pull-left fa-border" aria-hidden="true"></i>
                                 </div>
                             </div>
@@ -460,10 +439,7 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                                 </p>
                                 <div class="left">
-                                    <a href="#" class="show-pop-sharer" data-animation="pop" data-placement="auto-top"><i class="fa fa-mail-forward fa-2x fa-pull-left fa-border" aria-hidden="true"></i></a>
-                                    <div id="sharerContent" style="display:none;">
-                                        <div id="shareIconsCount"></div>
-                                    </div>
+                                    <i class="fa fa-mail-forward fa-2x fa-pull-left fa-border" aria-hidden="true"></i>
                                     <i class="fa fa-star-o fa-2x fa-pull-left fa-border" aria-hidden="true"></i>
                                 </div>
                             </div>
@@ -528,23 +504,18 @@
                 <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
             </footer>
         </div>
-        
+        <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/flickr.js"></script>
         <script src="js/flexslider.min.js"></script>
         <script src="js/lightbox.min.js"></script>
         <script src="js/masonry.min.js"></script>
         <script src="js/ytplayer.min.js"></script>
         <script src="js/smooth-scroll.min.js"></script>
         <script src="js/parallax.js"></script>
-        <script src="js/jquery.rwdImageMaps.min.js"></script>
         <script src="js/scripts.js"></script>
-        <script src="vendor/j-rating/j-rating.js"></script>
-        <script src="js/jssocials.min.js"></script>
-        <script src="js/jquery.webui-popover.min.js"></script> 
-        <script>
-        // Image Map
-        $('img[usemap]').rwdImageMaps();
 
+        <script>
         // PIE Charts
         // ======================
 
@@ -570,29 +541,6 @@
             $chart.css('margin-left', - $chart.attr('data-size') / 2 );
         });
 
-        // Social Share
-        $("#shareIconsCount").jsSocials({
-            //url: "http://www.cemilanmantap.com",
-            //text: "Cemilan Mantap",
-            showLabel: false,
-            showCount: true,
-            shares: ["facebook"]
-        });
-
-        (function(){
-            function initPopover(){                 
-                var sharerContent = $('#sharerContent').html(),
-                    sharerSettings = {content:sharerContent,
-                                        width:150,
-                                        height:85,
-                                        padding:true,
-                                        delay:{show:300,hide:1000},
-                                        closeable:true
-                                    };
-                var popSharer = $('a.show-pop-sharer').webuiPopover('destroy').webuiPopover($.extend({},sharerSettings));
-            }
-            initPopover();
-        })();
-        </script>
+      	</script>
     </body>
 </html>
