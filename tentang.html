@@ -5,6 +5,7 @@
         <title>Cemilan Mantap - Tentang Cemilan Mantap</title>
         <meta name="viewport" content="width=device-width, initial-scale=0.9">
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/bootstrap.extension.css" rel="stylesheet" type="text/css" />
         <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
@@ -47,84 +48,67 @@
                         <li>
                             <a href="articles.html">Articles</a>
                         </li>
+                        <li>
+                            <a class="open-popup btn btn-filled btn-sm" data-rel="1"><i class="fa fa-1x fa-user" aria-hidden="true"></i> Login</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
         </header>
         <div class="main-container">
-            <section class="image-bg pt120 pb0 pb-xs-80">
-            	<div class="background-image-holder">
-					<img alt="image" class="background-image" src="img/ttg_header_bkg.jpg" />
-				</div>
-				<div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6 text-center p0">
-                            <img src="img/ttg_gisel-gading_02.png" alt="Gisel + Gading">
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <h1 class="color-red text-center-xs mt40 mt-xs-32">PILIH SELERAMU</h1>
-							<p class="color-body">
-								<span class="color-body bold">Momen ngemil pasti mantap dengan Kopi ABC</span><br>
-                                Ngopi dan cemilan memang telah melekat dan menjadi bagian kehidupan
-                                seluruh lapisan masyarakat Indonesia sebagai teman santai
-                                sejenak di tengah kesibukan aktivitas sehari-hari.
-                                Selain dapat menenangkan dan menyenangkan sejenak, momen santai ditemani
-                                nikmatnya secangkir kopi dan camilan pun kini telah menjadi gaya hidup.
-                                Bila sepasang ideal mantap ini dinikmati, seketika langsung memberikan
-                                keakraban dan mencairkan suasana.  Itulah mengapa Kopi ABC menghadirkan
-                                sebuah direktori cemilan yang inspiratif untuk #TemanMantap.
-                            </p>
-                            <p class="color-body">
-                                <span class="color-body bold">Inilah saatnya kebangkitan Kuliner Indonesia di mata Dunia</span><br>
-                                Mari perkaya kuliner Indonesia… Puluhan ribu beragam cemilan khas nasional
-                                dihadirkan melalui partisipasi dan saling berbagi para #TemanMantap
-                                tentang info cemilan kuliner favorit seluruh Indonesia. Dukung cemilan
-                                Nusantara menjadi sumber kekayaan negeri ini, dan mantapkan setiap moment
-                                kebersamaanmu dengan secangkir kopi ABC.
-							</p>
-                            <p class="color-body bold">
-                                Ikuti! dan menangkan hadiahnya!
-                            </p>
-                            <ul class="list-inline tentang-hadiah">
-                                <li class="text-center">
-                                    <img src="img/ttg_hadiah_01.png" alt="Hadiah 01">
-                                    <p class="small color-body">1 Samsung<br>Galaxy S8</p>
-                                </li>
-                                <li class="text-center">
-                                    <img src="img/ttg_hadiah_02.png" alt="Hadiah 01">
-                                    <p class="small color-body">1 Sony Mirroless<br>A6000</p>
-                                </li>
-                                <li class="text-center">
-                                    <img src="img/ttg_hadiah_03.png" alt="Hadiah 01">
-                                    <p class="small color-body">1 GoPro<br>Hero 5</p>
-                                </li>
-                                <li class="text-center">
-                                    <img src="img/ttg_hadiah_04.png" alt="Hadiah 01">
-                                    <p class="small color-body">50 Voucher<br>IDR 200.000</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--end of row-->
-
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <h1 class="color-red text-center mt40 mt-xs-32">ABOUT PROGRAM</h1>
-                            <p class="color-body">
-                                <span class="color-body bold lead">Where does it come from?</span><br>
-                                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                            </p>
-                            <p class="color-body">
-                                <span class="color-body bold lead">Where can I get some?</span><br>
-                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-                            </p>
-                        </div>
-                    </div>
-                    <!--end of row-->
+            <section class="image-square left tentang-cm-wrapper pt120 pt-xs-64">
+                <div class="background-image-holder">
+                    <img alt="image" class="background-image" src="img/ttg_header_bkg.jpg" />
                 </div>
-                <!--end of container-->
+                <div class="col-md-5 image">
+                    <div class="background-image-holder">
+                        <img alt="image" class="background-image" src="img/ttg_gisel-gading_02.png" />
+                    </div>
+                </div>
+                <div class="col-md-7 content">
+                    <h1 class="color-red text-center-xs">PILIH SELERAMU</h1>
+                    <p class="color-body">
+                        <span class="color-body bold">Momen ngemil pasti mantap dengan Kopi ABC</span><br>
+                        Ngopi dan cemilan memang telah melekat dan menjadi bagian kehidupan
+                        seluruh lapisan masyarakat Indonesia sebagai teman santai
+                        sejenak di tengah kesibukan aktivitas sehari-hari.
+                        Selain dapat menenangkan dan menyenangkan sejenak, momen santai ditemani
+                        nikmatnya secangkir kopi dan camilan pun kini telah menjadi gaya hidup.
+                        Bila sepasang ideal mantap ini dinikmati, seketika langsung memberikan
+                        keakraban dan mencairkan suasana.  Itulah mengapa Kopi ABC menghadirkan
+                        sebuah direktori cemilan yang inspiratif untuk #TemanMantap.
+                    </p>
+                    <p class="color-body">
+                        <span class="color-body bold">Inilah saatnya kebangkitan Kuliner Indonesia di mata Dunia</span><br>
+                        Mari perkaya kuliner Indonesia… Puluhan ribu beragam cemilan khas nasional
+                        dihadirkan melalui partisipasi dan saling berbagi para #TemanMantap
+                        tentang info cemilan kuliner favorit seluruh Indonesia. Dukung cemilan
+                        Nusantara menjadi sumber kekayaan negeri ini, dan mantapkan setiap moment
+                        kebersamaanmu dengan secangkir kopi ABC.
+                    </p>
+                    <p class="color-body bold">
+                        Ikuti! dan menangkan hadiahnya!
+                    </p>
+                    <ul class="list-inline tentang-hadiah">
+                        <li class="text-center">
+                            <img src="img/ttg_hadiah_01.png" alt="Hadiah 01">
+                            <p class="small color-body">1 Samsung<br>Galaxy S8</p>
+                        </li>
+                        <li class="text-center">
+                            <img src="img/ttg_hadiah_02.png" alt="Hadiah 01">
+                            <p class="small color-body">1 Sony Mirroless<br>A6000</p>
+                        </li>
+                        <li class="text-center">
+                            <img src="img/ttg_hadiah_03.png" alt="Hadiah 01">
+                            <p class="small color-body">1 GoPro<br>Hero 5</p>
+                        </li>
+                        <li class="text-center">
+                            <img src="img/ttg_hadiah_04.png" alt="Hadiah 01">
+                            <p class="small color-body">50 Voucher<br>IDR 200.000</p>
+                        </li>
+                    </ul>
+                </div>
             </section>
-            
             <section class=" bg-red">
                 <div class="page-title ">
                     <div class="container">
@@ -267,6 +251,189 @@
                 <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
             </footer>
         </div>
+
+<!-- POP UP -->
+<div class="popup-wrapper">
+    <div class="bg-layer"></div>
+    
+    <!-- LOGIN ATAU SIGNUP -->
+    <div class="popup-content" data-rel="1">
+        <div class="layer-close"></div>
+        <div class="popup-container size-1">
+            <div class="popup-align">
+                <div class="text-center image-bg">
+                    <div class="background-image-holder submit-pilihseleramu">
+                        <img alt="Background" class="background-image" src="img/background/bkg-modal.jpg" />
+                    </div>
+                    
+                    <div class="text-center">
+                        <img src="img/brand/logo-cemilan-mantap.png" alt="cemilan mantap">
+                    </div>
+
+                    <div class="row v-align-children">
+                        <div class="col-md-12 col-sm-12 mb-xs-24">
+                            <h3 class="color-body">LOGIN ATAU SIGNUP</h3>
+                            <div class="row">
+                                <div class="col-sm-4 col-sm-offset-2 col-xs-12">
+                                    <button type="button" class="btn btn-primary btn-md btn-block"><i class="fa fa-1x fa-facebook"></i> Facebook</button>
+                                </div>
+                                <div class="col-sm-4 col-xs-12">
+                                    <button type="button" class="btn btn-filled-google btn-md btn-block"><i class="fa fa-1x fa-google"></i> Google</button>
+                                </div>
+                            </div>
+                            <h4 class="center-block">ATAU</h4>
+                            <div class="row">
+                                <div class="col-sm-4 col-sm-offset-2 col-xs-12">
+                                    <button type="button" class="btn btn-grey btn-md btn-block"> LOGIN</button>
+                                </div>
+                                <div class="col-sm-4 col-xs-12">
+                                    <button type="button" class="btn btn-filled-white btn-md btn-block">SIGNUP</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-close"></div>
+        </div>
+    </div>
+    
+    <!-- SIGNUP -->
+    <div class="popup-content" data-rel="2">
+        <div class="layer-close"></div>
+        <div class="popup-container size-1">
+            <div class="popup-align">
+                <div class="text-center image-bg">
+                    <div class="background-image-holder submit-pilihseleramu">
+                        <img alt="Background" class="background-image" src="img/background/bkg-modal.jpg" />
+                    </div>
+                    <div class="text-left">
+                        <img src="img/brand/logo-cemilan-mantap.png" alt="cemilan mantap">
+                    </div>
+                    
+                    <div class="row v-align-children">
+                        <div class="col-md-12 col-sm-12">
+                            <h3 class="color-body text-center">SIGN UP</h3>
+                            <div class="empty-space col-xs-b30"></div>
+                            <div class="simple-input-wrapper">
+                                <input class="simple-input" value="" type="text" placeholder="Full Name" />
+                                <div class="empty-space col-xs-b10 col-sm-b20"></div>
+                                <input class="simple-input" value="" type="text" placeholder="Email Address" />
+                                <div class="empty-space col-xs-b10 col-sm-b20"></div>
+                                <input class="simple-input" value="" type="password" placeholder="Password" />
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-grey btn-md btn-block col-md-6 col-md-push-3">REGISTER</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-close"></div>
+        </div>
+    </div>
+    
+    <!-- LOGIN -->
+    <div class="popup-content" data-rel="3">
+        <div class="layer-close"></div>
+        <div class="popup-container size-1">
+            <div class="popup-align">
+                <div class="text-center image-bg">
+                    <div class="background-image-holder submit-pilihseleramu">
+                        <img alt="Background" class="background-image" src="img/background/bkg-modal.jpg" />
+                    </div>
+                    <div class="text-left">
+                        <img src="img/brand/logo-cemilan-mantap.png" alt="cemilan mantap">
+                    </div>
+
+                    <div class="row v-align-children">
+                        <div class="col-md-12 col-sm-12">
+                            <h3 class="h3 text-center">LOGIN</h3>
+                            <div class="empty-space col-xs-b30"></div>
+                            <div class="simple-input-wrapper">
+                                <input class="simple-input" value="" type="text" placeholder="Email Address" />
+                            </div>
+                            <div class="empty-space col-xs-b5 col-sm-b10"></div>
+                            <div class="simple-input-wrapper">
+                                <input class="simple-input" value="" type="password" placeholder="Password" />
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-b10 col-sm-b0">
+                                    <div class="empty-space col-sm-b5"></div>
+                                    <a class="simple-link open-popup color-red" data-rel="4" style="font-size: 10px">Forgot password?</a>
+                                    <div class="empty-space col-xs-b5"></div>
+                                    <a class="simple-link open-popup color-red" data-rel="2" style="font-size: 10px">Register</a>
+                                </div>
+                            </div>                            
+                            <div class="col-sm-12 text-center">
+                                <button type="submit" class="btn btn-grey btn-md btn-block col-md-6 col-md-push-3">LOGIN</button>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-close"></div>
+        </div>
+    </div>
+    
+    <!-- FORGOT PASSWORD -->
+    <div class="popup-content" data-rel="4">
+        <div class="layer-close"></div>
+        <div class="popup-container size-1">
+
+            <div class="popup-align">
+                <div class="text-center image-bg">
+                    <div class="background-image-holder submit-pilihseleramu">
+                        <img alt="Background" class="background-image" src="img/background/bkg-modal.jpg" />
+                    </div>
+                    <div class="text-left">
+                        <img src="img/brand/logo-cemilan-mantap.png" alt="cemilan mantap">
+                    </div>
+
+                    <div class="row v-align-children">
+                        <div class="col-md-12 col-sm-12">
+                            <h3 class="h3 text-center">FORGOT PASSWORD?</h3>
+                            <div class="empty-space col-xs-b30"></div>
+                            <div class="simple-input-wrapper">
+                                <input class="simple-input" value="" type="text" placeholder="Email Address" />
+                            </div>                           
+                            <div class="col-sm-12 text-center">
+                                <button type="submit" class="btn btn-grey btn-md btn-block col-md-6 col-md-push-3">RESET PASSWORD</button>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-close"></div>
+        </div>
+    </div>
+
+    <!-- PASSWORD SENT -->
+    <div class="popup-content" data-rel="5">
+        <div class="layer-close"></div>
+        <div class="popup-container size-1">
+            <div class="popup-align">
+                <div class="text-center image-bg">
+                    <div class="background-image-holder submit-pilihseleramu">
+                        <img alt="Background" class="background-image" src="img/background/bkg-modal.jpg" />
+                    </div>
+                    <div class="text-left">
+                        <img src="img/brand/logo-cemilan-mantap.png" alt="cemilan mantap">
+                    </div>
+                    <div class="row v-align-children">
+                        <div class="col-md-12 col-sm-12 mb-xs-24">
+                            <h2 class="color-body">PASSWORD TELAH<br>DIKIRIM MELALUI EMAIL</h2>
+                        </div>
+                    </div>
+                </div>
+            <div class="button-close"></div>
+        </div>
+    </div>
+</div>
+<!-- END POPUP -->
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/flexslider.min.js"></script>

@@ -73,7 +73,18 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-12 text-center">
-                                    <h2 class="mb0">Pilih Seleramu</h2>
+                                    
+                                    <!-- BUTTONS FOR SHOWCASING THE POPUP MODAL  -->
+                                    <!-- PLEASE REMOVE THESE BUTTON AFTER DEVELOPMENT -->
+                                    <a class="open-popup btn btn-grey btn-md" data-rel="2"><i class="fa fa-1x fa-user" aria-hidden="true"></i> SIGNUP</a>
+
+                                    <a class="open-popup btn btn-grey btn-md" data-rel="3"><i class="fa fa-1x fa-user" aria-hidden="true"></i> Login</a>
+
+                                    <a class="open-popup btn btn-grey btn-md" data-rel="4"><i class="fa fa-1x fa-user" aria-hidden="true"></i> FORGOT PASSWORD</a>
+
+                                    <a class="open-popup btn btn-grey btn-md" data-rel="5"><i class="fa fa-1x fa-user" aria-hidden="true"></i>PASSWOORD SENT</a>
+
+                                    <!-- PLEASE REMOVE THESE BUTTON AFTER DEVELOPMENT -->
                                 </div>
                             </div> 
                         </div>
@@ -82,88 +93,6 @@
                         <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
                             <form id="pilih-seleramu">
                                 <div class="overflow-hidden">
-                                    <input type="text" name="nama-cemilan" class="validate-required" placeholder="Nama Cemilan*" />
-                                    <input type="text" name="nama-tempat" class="validate-required" placeholder="Nama Tempat*" />
-                                    <div id="gmaps-container">
-                                        <div id='input-gmaps'>
-                                          <input class="gmaps" id='gmaps-input-address' placeholder='ALAMAT' type='text' />
-                                          <br/>
-
-                                          <div id='gmaps-error'></div>
-                                        </div>
-
-                                        <div id='gmaps-canvas'></div>
-                                    </div>
-                                    <textarea name="review" placeholder="Review" rows="3"></textarea>
-
-                                    <div class="row p16 pt16" style="background-color: #F2B800">
-                                        <div class="col-md-4 col-xs-4 text-left">
-                                            <h4>RATING</h4>
-                                        </div>
-                                        <div class="col-md-8 col-xs-8 text-right">
-                                            <div id="pilihseleramu-rating"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="row text-center mt24">
-                                        <div class="col-md-6">
-                                            <label class="pilih-pastimanis">
-                                                <input type="radio" name="category_cemilan" id="category_pastimanis" value="#PastiManis">
-                                                <img src="img/input-btn-pastimanis.png" alt="PastiManis">
-                                            </label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="pilih-gurihmantap">
-                                                <input type="radio" name="category_cemilan" id="category_gurihmantap" value="#GurihMantap">
-                                                <img src="img/input-btn-gurihmantap.png" alt="GurihMantap">
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div class="row text-center mt24">
-                                        <div class="col-md-3 col-xs-6">
-                                            <label class="pilihseleramu">
-                                                <input type="radio" name="time_cemilan" id="cemilan_pagi" value="pagi">
-                                                <img src="img/input-pagi.png" alt="Pagi">
-                                            </label>
-                                        </div>
-                                        <div class="col-md-3 col-xs-6">
-                                            <label class="pilihseleramu">
-                                                <input type="radio" name="time_cemilan" id="cemilan_siang" value="Siang">
-                                                <img src="img/input-siang.png" alt="Siang">
-                                            </label>
-                                        </div>
-                                        <div class="col-md-3 col-xs-6">
-                                            <label class="pilihseleramu">
-                                                <input type="radio" name="time_cemilan" id="cemilan_sore" value="Sore">
-                                                <img src="img/input-sore.png" alt="Sore">
-                                            </label>
-                                        </div>
-                                        <div class="col-md-3 col-xs-6">
-                                            <label class="pilihseleramu">
-                                                <input type="radio" name="time_cemilan" id="cemilan_malam" value="Malam">
-                                                <img src="img/input-malam.png" alt="Malam">
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div class="photo-upload-container">
-                                        <div class="row center-block">
-                                            <div class="col-md-3 col-sm-6 col-xs-6 mb-xs-32">
-                                                <div id="photo_01" orakuploader="on"></div>
-                                            </div>
-                                            <div class="col-md-3 col-sm-6 col-xs-6 mb-xs-32">
-                                                <div id="photo_02" orakuploader="on"></div>
-                                            </div>
-                                            <div class="col-md-3 col-sm-6 col-xs-6 mb-xs-32">
-                                                <div id="photo_03" orakuploader="on"></div>
-                                            </div>
-                                            <div class="col-md-3 col-sm-6 col-xs-6 mb-xs-32">
-                                                <div id="photo_04" orakuploader="on"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3 mt64">
                                         <div class="modal-container">
                                             <button type="submit" href="#" class="btn-modal">Submit</button>
@@ -203,7 +132,6 @@
                                                 </div>
                                             </div>
                                             <!-- END MODAL DAFTAR CEMILANMANTAP -->
-
 
 
                                             <!-- START MODAL PARTISIPASI -->
@@ -307,6 +235,7 @@
                 <!--end of row-->
                 <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
             </footer>
+        </div>
 
 <!-- POP UP -->
 <div class="popup-wrapper">
@@ -491,7 +420,6 @@
 </div>
 <!-- END POPUP -->
 
-        </div>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/flexslider.min.js"></script>
         <script src="js/lightbox.min.js"></script>
